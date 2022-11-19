@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalAPP_Hasaki.Views.TrangChu">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Kiểm tra đơn hàng" x:Name="TIKTDH" Clicked="TIKTDH_Clicked"></ToolbarItem>
+        <ToolbarItem IconImageSource="shoppingcarticon.png" x:Name="TIgiohang" Clicked="TIgiohang_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Trang chu!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

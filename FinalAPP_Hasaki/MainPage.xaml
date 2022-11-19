@@ -1,24 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FinalAPP_Hasaki"
+             xmlns:views="clr-namespace:FinalAPP_Hasaki.Views"
              x:Class="FinalAPP_Hasaki.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView></local:HeaderContentView>
+    </Shell.FlyoutHeader>
 
-</ContentPage>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
+        <Tab Icon="trangchuicon.png" Title="Trang chủ">
+            <ShellContent ContentTemplate="{DataTemplate views:TrangChu}"/>
+        </Tab>
+        <Tab Icon="danhmucsanphamicon.png" Title="Danh mục sản phẩm">
+            <ShellContent ContentTemplate="{DataTemplate views:DanhMucSanPham}"/>
+        </Tab>
+        <Tab Icon="thongbaoicon.png" Title="Thông báo">
+            <ShellContent ContentTemplate="{DataTemplate views:ThongBao}"/>
+        </Tab>
+        <Tab Icon="hotdealsicon.png" Title="Hot Deals">
+            <ShellContent ContentTemplate="{DataTemplate views:HotDeals}"/>
+        </Tab>
+        <Tab Icon="thuonghieuicon.png" Title="Thương hiệu">
+            <ShellContent ContentTemplate="{DataTemplate views:ThuongHieu}"/>
+        </Tab>
+        <Tab Icon="questionmarkicon.png" Title="Quy định giao dịch chung">
+            <ShellContent ContentTemplate="{DataTemplate views:QuyDinh}"/>
+        </Tab>
+        <Tab Icon="questionmarkicon.png" Title="Hasaki hỗ trợ">
+            <ShellContent ContentTemplate="{DataTemplate views:HoTro}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
+        <Tab Icon="ktdonhangicon.png" Title="Kiểm tra đơn hàng">
+            <ShellContent ContentTemplate="{DataTemplate views:DonHang}"/>
+        </Tab>
+        <Tab Icon="qltkicon.png" Title="Quản lí tài khoản">
+            <ShellContent ContentTemplate="{DataTemplate views:QLTaiKhoan}"/>
+        </Tab>
+    </FlyoutItem>
+</Shell>

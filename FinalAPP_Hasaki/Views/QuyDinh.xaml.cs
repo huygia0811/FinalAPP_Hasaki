@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace FinalAPP_Hasaki
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace FinalAPP_Hasaki.Views
 {
-    public partial class MainPage : Shell
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class QuyDinh : ContentPage
     {
-        public MainPage()
+        public QuyDinh()
         {
             InitializeComponent();
         }
