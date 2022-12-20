@@ -231,9 +231,6 @@
     <AndroidResource Include="Resources\drawable\logo_blossomy.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_calvinklein.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_closeup.png" />
   </ItemGroup>
   <ItemGroup>
@@ -273,10 +270,10 @@
     <AndroidResource Include="Resources\drawable\logo_xmen.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo-vitalbeautie.png" />
+    <AndroidResource Include="Resources\drawable\logo_vitalbeautie.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\shopping-carticon.png" />
+    <AndroidResource Include="Resources\drawable\shopping_carticon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\img_product1.jpg" />

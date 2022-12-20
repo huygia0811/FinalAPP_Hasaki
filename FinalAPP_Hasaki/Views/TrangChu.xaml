@@ -6,11 +6,124 @@
         <ToolbarItem Text="Kiểm tra đơn hàng" x:Name="TIKTDH" Clicked="TIKTDH_Clicked"></ToolbarItem>
         <ToolbarItem IconImageSource="shoppingcarticon.png" x:Name="TIgiohang" Clicked="TIgiohang_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Trang chu!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <Grid BackgroundColor="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="10">
+            <Label Text="day la quang cao" />
         </StackLayout>
-    </ContentPage.Content>
+        <ScrollView Grid.Row="1"
+                    HorizontalOptions="FillAndExpand">
+            <Grid RowSpacing="50"
+                  VerticalOptions="FillAndExpand"
+                  Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0"
+                             HeightRequest="20">
+                    <Button Text="SỨC KHỎE LÀM ĐẸP"
+                            TextColor="red"
+                            FontAttributes="Bold"
+                            FontSize="15" />
+                </StackLayout>
+                <CollectionView x:Name="Homeproduct1"
+                                HeightRequest="240"
+                                Grid.Row="1">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"
+                                         VerticalItemSpacing="0"
+                                         HorizontalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" Margin="0" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding ProductImageUrl}"
+                                       WidthRequest="100"
+                                       HeightRequest="90"
+                                       Grid.Row="0" />
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="{Binding ProductPrice, StringFormat='{0:0,0 vnd]'}"
+                                           FontSize="Medium"
+                                           TextColor="red" />
+                                    <Label Text="ĐÂY LÀ TÊN HÃNG"
+                                           FontSize="Medium"
+                                           TextColor="red" />
+                                    <Label Text="đây là mô tả sản phẩm"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                    <Label Text="đây là xuất xứ"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                    <Label Text="đây là dung tích"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Grid.Row="2"
+                             HeightRequest="20">
+                    <Button Text="MỸ PHẨM HIGHT-END"
+                            TextColor="red"
+                            FontAttributes="Bold"
+                            FontSize="15" />
+                </StackLayout>
+                <CollectionView x:Name="Homeproduct2"
+                                Grid.Row="3"
+                                HeightRequest="240">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"
+                                         VerticalItemSpacing="0"
+                                         HorizontalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10"
+                                  Margin="0"
+                                  BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding ProductImageUrl}"
+                                       WidthRequest="100"
+                                       HeightRequest="90"
+                                       Grid.Row="0" />
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="{Binding ProductPrice, StringFormat='{0:0,0 vnd]'}"
+                                           FontSize="Medium"
+                                           TextColor="red" />
+                                    <Label Text="ĐÂY LÀ TÊN HÃNG"
+                                           FontSize="Medium"
+                                           TextColor="red" />
+                                    <Label Text="đây là mô tả sản phẩm"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                    <Label Text="đây là xuất xứ"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                    <Label Text="đây là dung tích"
+                                           WidthRequest="10"
+                                           HeightRequest="20" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+               
+            </Grid>
+
+        </ScrollView>
+    </Grid>
 </ContentPage>
