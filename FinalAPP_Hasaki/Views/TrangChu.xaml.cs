@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using FinalAPP_Hasaki.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using System.Net.Http;
+using Newtonsoft.Json;
 namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -27,14 +28,14 @@ namespace FinalAPP_Hasaki.Views
         {
 
         }
-        List<Product> DSProducts;
-        void hienthiproduct()
+     
+        async void hienthiproduct()
         {
-            DSProducts = Product.KhoitaoProducts();
-            Homeproduct1.ItemsSource = DSProducts;
-            Homeproduct2.ItemsSource = DSProducts;
-           
-
+            HttpClient httpClient = new HttpClient();
+            var subjectlist = await httpClient.GetStringAsync("http://172.17.20.209/webapifinalhasaki/api/ServiceController/GetAllSanPham");
+            var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
+            Homeproduct1.ItemsSource = subjectlistConverted;
+            Homeproduct2.ItemsSource = subjectlistConverted;
         }
     }
 }
