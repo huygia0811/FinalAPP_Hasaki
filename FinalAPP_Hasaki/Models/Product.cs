@@ -16,5 +16,6 @@ namespace FinalAPP_Hasaki.Models
         public string DUNGTICH { get; set; }
         public string LOAIDA { get; set; }
         public string URL_IMAGE { get; set; }
+        public string URL_IMAGE1 { get; set; }
     }
 }
