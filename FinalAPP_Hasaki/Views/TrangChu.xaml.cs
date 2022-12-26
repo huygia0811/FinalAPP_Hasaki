@@ -32,11 +32,8 @@ namespace FinalAPP_Hasaki.Views
         async void hienthiproduct()
         {
             HttpClient httpClient = new HttpClient();
-<<<<<<< HEAD
+
             var subjectlist = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetAllSanPham");
-=======
-            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetAllSanPham");
->>>>>>> 8f5ae8a6806b71cd7499c70a864ce359eebcc0ad
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             Homeproduct1.ItemsSource = subjectlistConverted;
             Homeproduct2.ItemsSource = subjectlistConverted;
