@@ -13,20 +13,11 @@
         <Tab Icon="trangchuicon.png" Title="Trang chủ">
             <ShellContent ContentTemplate="{DataTemplate views:TrangChu}"/>
         </Tab>
-        <Tab Icon="danhmucsanphamicon.png" Title="Danh mục sản phẩm">
-            <ShellContent ContentTemplate="{DataTemplate views:DanhMucSanPham}"/>
-        </Tab>
         <Tab Icon="thongbaoicon.png" Title="Thông báo">
             <ShellContent ContentTemplate="{DataTemplate views:ThongBao}"/>
         </Tab>
-        <Tab Icon="hotdealsicon.png" Title="Hot Deals">
-            <ShellContent ContentTemplate="{DataTemplate views:HotDeals}"/>
-        </Tab>
         <Tab Icon="thuonghieuicon.png" Title="Thương hiệu">
             <ShellContent ContentTemplate="{DataTemplate views:ThuongHieu}"/>
-        </Tab>
-        <Tab Icon="questionmarkicon.png" Title="Quy định giao dịch chung">
-            <ShellContent ContentTemplate="{DataTemplate views:QuyDinh}"/>
         </Tab>
         <Tab Icon="questionmarkicon.png" Title="Hasaki hỗ trợ">
             <ShellContent ContentTemplate="{DataTemplate views:HoTro}"/>
