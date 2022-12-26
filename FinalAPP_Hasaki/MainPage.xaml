@@ -16,6 +16,9 @@
         <Tab Icon="thongbaoicon.png" Title="Thông báo">
             <ShellContent ContentTemplate="{DataTemplate views:ThongBao}"/>
         </Tab>
+        <Tab Icon="hotdealsicon.png" Title="Hot Deals">
+            <ShellContent ContentTemplate="{DataTemplate views:HotDeals}"/>
+        </Tab>
         <Tab Icon="thuonghieuicon.png" Title="Thương hiệu">
             <ShellContent ContentTemplate="{DataTemplate views:ThuongHieu}"/>
         </Tab>

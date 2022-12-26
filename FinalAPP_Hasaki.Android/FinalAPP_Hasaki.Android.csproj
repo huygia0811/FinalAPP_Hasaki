@@ -89,7 +89,9 @@
       <Name>FinalAPP_Hasaki</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hotdealsicon.png" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\thongbaoicon.png" />
   </ItemGroup>
