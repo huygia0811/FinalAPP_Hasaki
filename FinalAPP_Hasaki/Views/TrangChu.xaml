@@ -6,20 +6,191 @@
         <ToolbarItem Text="Kiểm tra đơn hàng" x:Name="TIKTDH" Clicked="TIKTDH_Clicked"></ToolbarItem>
         <ToolbarItem IconImageSource="shoppingcarticon.png" x:Name="TIgiohang" Clicked="TIgiohang_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
-    <Grid BackgroundColor="Gray">
+    <ScrollView HorizontalOptions="FillAndExpand">
+        <Grid  BackgroundColor="#f1f0f5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <StackLayout Grid.Row="10">
-            <Label Text="day la quang cao" />
-        </StackLayout>
-        <ScrollView Grid.Row="1"
-                    HorizontalOptions="FillAndExpand">
+        <StackLayout Grid.Row="0">
+                <Image Source="slider.png"></Image>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid  Grid.Row="0"
+                           Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="ca_nhan.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="My_pham_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Mỹ phẩm"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="0"
+                           Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="da_mat.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Da_mat_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Da mặt"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="0"
+                           Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="toc_da.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Toc_da_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Tóc và da"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="0"
+                           Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="co_the.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Co_the_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Cơ Thể"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="1"
+                           Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="ca_nhan.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Ca_nhan_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Cá nhân"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+
+                    <Grid  Grid.Row="1"
+                           Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="nuoc_hoa.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Nuoc_hoa_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Nước Hoa"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="1"
+                           Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="chuc_nang.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Chuc_nang_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Chức năng"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                    <Grid  Grid.Row="1"
+                           Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="trang_diem.png"
+                               WidthRequest="50"
+                               HeightRequest="50"
+                               Grid.Row="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="trang_diem_tapped"
+                                                      NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Grid.Row="1"
+                               Text="Trang điểm"
+                               HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
             <Grid RowSpacing="50"
                   VerticalOptions="FillAndExpand"
-                  Grid.Row="0">
+                  Grid.Row="2">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
@@ -27,49 +198,88 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0"
                              HeightRequest="20">
-                    <Button Text="SỨC KHỎE LÀM ĐẸP"
+                    <Button Text="Thương hiệu nổi bật"
                             TextColor="red"
                             FontAttributes="Bold"
                             FontSize="15" />
                 </StackLayout>
-                <CollectionView x:Name="Homeproduct1"
-                                HeightRequest="300"
+              
+                <!--<CollectionView x:Name="Thuonghieu_noibat"
+                                HeightRequest="150"
                                 Grid.Row="1">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Horizontal"      
+                        <GridItemsLayout Orientation="Horizontal"
                                          VerticalItemSpacing="0"
-                                         HorizontalItemSpacing="10" 
-                                         />
+                                         HorizontalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>-->
+                            <Grid Padding="10"
+                                  Margin="0"
+                                  BackgroundColor="White" Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                      <ColumnDefinition Width="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                    <Image Source="noibat.jpg"
+                                       WidthRequest="100"
+                                       HeightRequest="100"
+                                       Aspect="AspectFill"/>
+                            </Grid>
+                        <!--</DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>-->
+                <StackLayout Grid.Row="2"
+                             HeightRequest="20">
+                    <Button Text="Sức khỏe làm đẹp"
+                            TextColor="red"
+                            FontAttributes="Bold"
+                            FontSize="15" />
+
+                </StackLayout>
+                <CollectionView x:Name="Homeproduct1"
+                                HeightRequest="300"
+                                Grid.Row="3">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"
+                                         VerticalItemSpacing="0"
+                                         HorizontalItemSpacing="10" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Padding="10" Margin="0" BackgroundColor="White">
+                            <Grid Padding="10"
+                                  Margin="0"
+                                  BackgroundColor="White">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Image Source="{Binding URL_IMAGE1}"
-                                       WidthRequest="100"
-                                       HeightRequest="90"
-                                       Grid.Row="0" 
-                                      />
+                                       WidthRequest="180"
+                                       HeightRequest="180"
+                                       Grid.Row="0"
+                                       Aspect="AspectFill" />
                                 <StackLayout Grid.Row="1">
                                     <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
                                            FontSize="Medium"
-                                           TextColor="red" />
+                                           TextColor="Orange" />
+                                    <Label Text="{Binding TENHANG}"
+                                           FontSize="Medium"
+                                           TextColor="Green"
+                                           WidthRequest="180" />
                                     <Label Text="{Binding TENSP}"
                                            FontSize="Medium"
-                                           TextColor="Aqua" WidthRequest="180" />
-                                    <Label Text="{Binding MOTA}"
                                            WidthRequest="10"
                                            HeightRequest="70" />
-                                   
+
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <StackLayout Grid.Row="2"
+                <StackLayout Grid.Row="4"
                              HeightRequest="20">
                     <Button Text="MỸ PHẨM HIGHT-END"
                             TextColor="red"
@@ -77,7 +287,7 @@
                             FontSize="15" />
                 </StackLayout>
                 <CollectionView x:Name="Homeproduct2"
-                                Grid.Row="3"
+                                Grid.Row="5"
                                 HeightRequest="300">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal"
@@ -94,18 +304,19 @@
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Image Source="{Binding URL_IMAGE1}"
-                                       WidthRequest="100"
-                                       HeightRequest="90"
-                                       Grid.Row="0" />
+                                       WidthRequest="180"
+                                       HeightRequest="180"
+                                       Grid.Row="0" Aspect="AspectFill"/>
                                 <StackLayout Grid.Row="1">
                                     <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
                                            FontSize="Medium"
-                                           TextColor="red" />
+                                           TextColor="Orange" />
+                                    <Label Text="{Binding TENHANG}"
+                                           FontSize="Medium"
+                                           TextColor="Green"
+                                           WidthRequest="180" />
                                     <Label Text="{Binding TENSP}"
                                            FontSize="Medium"
-                                           TextColor="Aqua"
-                                           WidthRequest="180" />
-                                    <Label Text="{Binding MOTA}"
                                            WidthRequest="10"
                                            HeightRequest="70" />
 
@@ -114,9 +325,64 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-               
-            </Grid>
+                <StackLayout Grid.Row="6"
+                             HeightRequest="20"
+                             Orientation="Horizontal"
+                             >
+                    <BoxView BackgroundColor="Green"
+                             HeightRequest="5"
+                             WidthRequest="100" 
+                             HorizontalOptions="StartAndExpand"/>
+                    <Label Text="GỢI Ý DÀNH RIÊNG CHO BẠN"
+                           TextColor="Green"
+                           HorizontalOptions="CenterAndExpand" />
+                    <BoxView BackgroundColor="Green"
+                             HeightRequest="5"
+                             WidthRequest="100"
+                             HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <CollectionView x:Name="Homeproduct3"
+                                HeightRequest="300"
+                                Grid.Row="7">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                         Span="2"
+                                         VerticalItemSpacing="0"
+                                         HorizontalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10"
+                                  Margin="0"
+                                  BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding URL_IMAGE1}"
+                                       WidthRequest="180"
+                                       HeightRequest="180"
+                                       Grid.Row="0"
+                                       Aspect="AspectFill" />
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
+                                           FontSize="Medium"
+                                           TextColor="Orange" />
+                                    <Label Text="{Binding TENHANG}"
+                                           FontSize="Medium"
+                                           TextColor="Green"
+                                           WidthRequest="180" />
+                                    <Label Text="{Binding TENSP}"
+                                           FontSize="Medium"
+                                           WidthRequest="10"
+                                           HeightRequest="70" />
 
-        </ScrollView>
-    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </Grid>
+    </ScrollView>
 </ContentPage>
