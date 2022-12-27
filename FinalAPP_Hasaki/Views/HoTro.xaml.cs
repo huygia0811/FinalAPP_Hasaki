@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,6 +14,11 @@ namespace FinalAPP_Hasaki.Views
         public HoTro()
         {
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChiTiet());
         }
     }
 }
