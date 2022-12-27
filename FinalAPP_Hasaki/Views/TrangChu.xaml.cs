@@ -33,13 +33,13 @@ namespace FinalAPP_Hasaki.Views
         {
             HttpClient httpClient = new HttpClient();
             //192.168.1.13
-            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=5");
+            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=5");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             Homeproduct1.ItemsSource = subjectlistConverted;
-            var subjectlist2 = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=6");
+            var subjectlist2 = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=6");
             var subjectlistConverted2 = JsonConvert.DeserializeObject<List<Product>>(subjectlist2);
             Homeproduct2.ItemsSource = subjectlistConverted2;
-            var subjectlist3 = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=7");
+            var subjectlist3 = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=7");
             var subjectlistConverted3 = JsonConvert.DeserializeObject<List<Product>>(subjectlist3);
             Homeproduct3.ItemsSource = subjectlistConverted3;
         }
@@ -82,6 +82,24 @@ namespace FinalAPP_Hasaki.Views
         private void trang_diem_tapped(object sender, EventArgs e)
         {
 
+        }
+
+        private void Homeproduct1_selection_changed(object sender, SelectionChangedEventArgs e)
+        {
+            Product product = (Product)e.CurrentSelection.FirstOrDefault();
+            Navigation.PushAsync(new ChiTiet(product));
+        }
+
+        private void Homeproduct2_selection_changed(object sender, SelectionChangedEventArgs e)
+        {
+            Product product = (Product)e.CurrentSelection.FirstOrDefault();
+            Navigation.PushAsync(new ChiTiet(product));
+        }
+
+        private void Homeproduct3_selection_changed(object sender, SelectionChangedEventArgs e)
+        {
+            Product product = (Product)e.CurrentSelection.FirstOrDefault();
+            Navigation.PushAsync(new ChiTiet(product));
         }
     }
 }

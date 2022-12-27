@@ -252,7 +252,9 @@
                 </StackLayout>
                 <CollectionView x:Name="Homeproduct1"
                                 HeightRequest="300"
-                                Grid.Row="3">
+                                Grid.Row="3"
+                                SelectionMode="Single"
+                                SelectionChanged="Homeproduct1_selection_changed">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal"
                                          VerticalItemSpacing="0"
@@ -299,7 +301,9 @@
                 </StackLayout>
                 <CollectionView x:Name="Homeproduct2"
                                 Grid.Row="5"
-                                HeightRequest="300">
+                                HeightRequest="300"
+                                SelectionMode="Single"
+                                SelectionChanged="Homeproduct2_selection_changed">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal"
                                          VerticalItemSpacing="0"
@@ -354,7 +358,9 @@
                 </StackLayout>
                 <CollectionView x:Name="Homeproduct3"
                                 HeightRequest="300"
-                                Grid.Row="7">
+                                Grid.Row="7"
+                                SelectionMode="Single"
+                                SelectionChanged="Homeproduct3_selection_changed">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical"
                                          Span="2"
