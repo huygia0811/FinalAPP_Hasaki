@@ -4,9 +4,9 @@
              x:Class="FinalAPP_Hasaki.Views.HoTro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="chitiet"
+                    Text="Pgae chitiet"
+                    Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
