@@ -4,9 +4,11 @@
              x:Class="FinalAPP_Hasaki.Views.HotDeals">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Margin="10">
+                <Image Source="slider.png"></Image>
+                <!--<Label Text="Siêu Sale Lễ Hội - Deal 2k 5k - Giảm đến 90%"></Label>-->
+                <Label Text="Khai trương CN 88 HCM - Quận 8" TextColor="#e68506" FontSize="Medium" FontAttributes="Bold"></Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
