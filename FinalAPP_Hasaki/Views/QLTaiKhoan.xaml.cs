@@ -16,5 +16,10 @@ namespace FinalAPP_Hasaki.Views
         {
             InitializeComponent();
         }
+
+        private void Testdangky_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DangKy());
+        }
     }
 }
