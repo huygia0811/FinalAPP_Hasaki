@@ -16859,40 +16859,37 @@ namespace FinalAPP_Hasaki.Droid
 			public const int questionmarkicon = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int rocketchat = 2131165381;
+			public const int shoppingcarticon = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int shoppingcarticon = 2131165382;
+			public const int slider = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int slider = 2131165383;
+			public const int test_custom_background = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int test_custom_background = 2131165384;
+			public const int thongbaoicon = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int thongbaoicon = 2131165385;
+			public const int thuonghieuicon = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int thuonghieuicon = 2131165386;
+			public const int toc_da = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int toc_da = 2131165387;
+			public const int tooltip_frame_dark = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int tooltip_frame_dark = 2131165388;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int tooltip_frame_light = 2131165389;
-			
-			// aapt resource value: 0x7F0700CF
-			public const int trangchuicon = 2131165391;
+			public const int tooltip_frame_light = 2131165388;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int trang_diem = 2131165390;
+			public const int trangchuicon = 2131165390;
 			
-			// aapt resource value: 0x7F0700D0
-			public const int UpButton = 2131165392;
+			// aapt resource value: 0x7F0700CD
+			public const int trang_diem = 2131165389;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int UpButton = 2131165391;
 			
 			static Drawable()
 			{

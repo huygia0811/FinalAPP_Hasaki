@@ -21,7 +21,7 @@
             </StackLayout>
             
             <!--Danh mục sản phẩm-->
-            <StackLayout Grid.Row="1">
+            <StackLayout Grid.Row="1" Margin="0, 20, 0, 20">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"></RowDefinition>
@@ -245,13 +245,13 @@
                 <StackLayout Grid.Row="2"
                              HeightRequest="20">
                     <Button Text="Mỹ phẩm"
-                            TextColor="red"
+                            TextColor="Green"
                             FontAttributes="Bold"
-                            FontSize="15" />
-                    
+                            FontSize="25" />
                 </StackLayout>
+                
                 <CollectionView x:Name="Homeproduct1"
-                                HeightRequest="300"
+                                HeightRequest="360"
                                 Grid.Row="3"
                                 SelectionMode="Single"
                                 SelectionChanged="Homeproduct1_selection_changed">
@@ -275,7 +275,7 @@
                                        Grid.Row="0"
                                        Aspect="AspectFill" />
                                 <StackLayout Grid.Row="1">
-                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
+                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 đ}'}"
                                            FontSize="Medium"
                                            TextColor="Orange" />
                                     <Label Text="{Binding TENHANG}"
@@ -284,24 +284,27 @@
                                            WidthRequest="180" />
                                     <Label Text="{Binding TENSP}"
                                            FontSize="Medium"
+                                           TextColor="Black"
                                            WidthRequest="10"
-                                           HeightRequest="70" />
+                                           HeightRequest="160" />
 
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+
                 <StackLayout Grid.Row="4"
                              HeightRequest="20">
-                    <Button Text="Chăm sóc da mặt"
-                            TextColor="red"
+                    <Button Text="Mỹ phẩm"
+                            TextColor="Green"
                             FontAttributes="Bold"
-                            FontSize="15" />
+                            FontSize="25" />
                 </StackLayout>
+
                 <CollectionView x:Name="Homeproduct2"
+                                HeightRequest="360"
                                 Grid.Row="5"
-                                HeightRequest="300"
                                 SelectionMode="Single"
                                 SelectionChanged="Homeproduct2_selection_changed">
                     <CollectionView.ItemsLayout>
@@ -321,9 +324,10 @@
                                 <Image Source="{Binding URL_IMAGE}"
                                        WidthRequest="180"
                                        HeightRequest="180"
-                                       Grid.Row="0" Aspect="AspectFill"/>
+                                       Grid.Row="0"
+                                       Aspect="AspectFill" />
                                 <StackLayout Grid.Row="1">
-                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
+                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 đ}'}"
                                            FontSize="Medium"
                                            TextColor="Orange" />
                                     <Label Text="{Binding TENHANG}"
@@ -332,30 +336,16 @@
                                            WidthRequest="180" />
                                     <Label Text="{Binding TENSP}"
                                            FontSize="Medium"
+                                           TextColor="Black"
                                            WidthRequest="10"
-                                           HeightRequest="70" />
+                                           HeightRequest="160" />
 
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <StackLayout Grid.Row="6"
-                             HeightRequest="20"
-                             Orientation="Horizontal"
-                             >
-                    <BoxView BackgroundColor="Green"
-                             HeightRequest="5"
-                             WidthRequest="100" 
-                             HorizontalOptions="StartAndExpand"/>
-                    <Label Text="GỢI Ý DÀNH RIÊNG CHO BẠN"
-                           TextColor="Green"
-                           HorizontalOptions="CenterAndExpand" />
-                    <BoxView BackgroundColor="Green"
-                             HeightRequest="5"
-                             WidthRequest="100"
-                             HorizontalOptions="EndAndExpand" />
-                </StackLayout>
+                
                 <CollectionView x:Name="Homeproduct3"
                                 HeightRequest="300"
                                 Grid.Row="7"
