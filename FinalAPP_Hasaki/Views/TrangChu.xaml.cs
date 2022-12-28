@@ -87,19 +87,34 @@ namespace FinalAPP_Hasaki.Views
         private void Homeproduct1_selection_changed(object sender, SelectionChangedEventArgs e)
         {
             Product product = (Product)e.CurrentSelection.FirstOrDefault();
-            Navigation.PushAsync(new ChiTiet(product));
+            if(product!=null)
+            {
+                Navigation.PushAsync(new ChiTiet(product));
+            }    
+            
+            Homeproduct1.SelectedItem = null;
         }
 
         private void Homeproduct2_selection_changed(object sender, SelectionChangedEventArgs e)
         {
             Product product = (Product)e.CurrentSelection.FirstOrDefault();
-            Navigation.PushAsync(new ChiTiet(product));
+            if (product != null)
+            {
+                Navigation.PushAsync(new ChiTiet(product));
+            }
+
+            Homeproduct2.SelectedItem = null;
         }
 
         private void Homeproduct3_selection_changed(object sender, SelectionChangedEventArgs e)
         {
             Product product = (Product)e.CurrentSelection.FirstOrDefault();
-            Navigation.PushAsync(new ChiTiet(product));
+            if (product != null)
+            {
+                Navigation.PushAsync(new ChiTiet(product));
+            }
+
+            Homeproduct3.SelectedItem = null;
         }
     }
 }

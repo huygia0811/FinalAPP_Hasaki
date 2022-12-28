@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalAPP_Hasaki.Views.DangKy">
+    <ContentPage.Content>
+        <Grid Padding="10,40,10,0" BackgroundColor="#cfced3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Entry x:Name="HoTen_Entry" ReturnType="Next" Keyboard="Text" Placeholder="Họ và tên" Grid.Row="0" />
+            <Entry x:Name="SDT_entry"
+                   ReturnType="Next"
+                   Keyboard="Numeric"
+                   Placeholder="Số điện thoại"
+                   Grid.Row="1" />
+            <Entry x:Name="Matkhau_entry"
+                   ReturnType="Next"
+                   Keyboard="Text"
+                   IsPassword="True"
+                   Placeholder="Mật khẩu" Grid.Row="2" />
+            <!--<DatePicker x:Name="Ngaysinh_entry" MinimumDate="01/01/1111"
+                        MaximumDate="01/01/2023"
+                        Date="01/01/1990" Grid.Row="3" />-->
+            <!--<StackLayout Orientation="Horizontal" Grid.Row="4">
+                <RadioButton Content="Nam" />
+                <RadioButton Content="Nữ"
+                             IsChecked="true" />
+            </StackLayout>-->
+            <Label Grid.Row="5"                
+                   Text="Khi bạn đăng ký là bạn sẽ chấp nhận điều khoản sử dụng" />
+            <Button x:Name="click_dangky"
+                    Grid.Row="6"
+                    Text="ĐĂNG KÝ"
+                    TextColor="White" 
+                    BackgroundColor="green"
+                    Clicked="dangky_buttonclick"/>
+            <Button Grid.Row="7"                    
+                    Text="Bạn đã có tài khoản? Đăng nhập"                  
+                    TextColor="green"
+                    BackgroundColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
