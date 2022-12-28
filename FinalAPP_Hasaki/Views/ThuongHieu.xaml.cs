@@ -20,6 +20,20 @@ namespace FinalAPP_Hasaki.Views
             InitializeComponent();
             hienthihang();
         }
+        public ThuongHieu(Hang hang)
+        {
+            InitializeComponent();
+            hienthihang();
+            hienthiproduct(hang.MAHANG);
+        }
+        async void hienthiproduct(int mahang)
+        {
+            HttpClient httpClient = new HttpClient();
+            //192.168.1.13
+            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetSPByHang?mahang=" + mahang.ToString());
+            var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
+            Homeproduct.ItemsSource = subjectlistConverted;
+        }
         async void hienthihang()
         {
             HttpClient httpClient = new HttpClient();
@@ -27,6 +41,17 @@ namespace FinalAPP_Hasaki.Views
             var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetHang");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Hang>>(subjectlist);
             Thuonghieu_noibat.ItemsSource = subjectlistConverted;
+        }
+
+        private void Thuonghieu_noibat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Hang hang = (Hang)e.CurrentSelection.FirstOrDefault();
+            if (hang != null)
+            {
+                Navigation.PushAsync(new ThuongHieu(hang));
+            }
+
+            Thuonghieu_noibat.SelectedItem = null;
         }
     }
 }

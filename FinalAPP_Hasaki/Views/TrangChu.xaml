@@ -200,8 +200,6 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <!--Code thương hiệu( not completed)-->
@@ -215,6 +213,8 @@
 
                 <CollectionView x:Name="Thuonghieu_noibat"
                                 HeightRequest="160"
+                                SelectionMode="Single"
+                                SelectionChanged="Thuonghieu_noibat_SelectionChanged"
                                 Grid.Row="1">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal"
@@ -344,50 +344,6 @@
                                            TextColor="Black"
                                            WidthRequest="10"
                                            HeightRequest="160" />
-
-                                </StackLayout>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-                
-                <CollectionView x:Name="Homeproduct3"
-                                HeightRequest="300"
-                                Grid.Row="7"
-                                SelectionMode="Single"
-                                SelectionChanged="Homeproduct3_selection_changed">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical"
-                                         Span="2"
-                                         VerticalItemSpacing="0"
-                                         HorizontalItemSpacing="10" />
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Padding="10"
-                                  Margin="0"
-                                  BackgroundColor="White">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"></RowDefinition>
-                                    <RowDefinition Height="auto"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Image Source="{Binding URL_IMAGE}"
-                                       WidthRequest="180"
-                                       HeightRequest="180"
-                                       Grid.Row="0"
-                                       Aspect="AspectFill" />
-                                <StackLayout Grid.Row="1">
-                                    <Label Text="{Binding GIA, StringFormat='{0:0,0 vnd]'}"
-                                           FontSize="Medium"
-                                           TextColor="Orange" />
-                                    <Label Text="{Binding TENHANG}"
-                                           FontSize="Medium"
-                                           TextColor="Green"
-                                           WidthRequest="180" />
-                                    <Label Text="{Binding TENSP}"
-                                           FontSize="Medium"
-                                           WidthRequest="10"
-                                           HeightRequest="70" />
 
                                 </StackLayout>
                             </Grid>
