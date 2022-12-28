@@ -4,9 +4,8 @@
              x:Class="FinalAPP_Hasaki.Views.QLTaiKhoan">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="Testdangky" Text="test dangky" Clicked="Testdangky_Clicked" BackgroundColor="red"/>
         </StackLayout>
+  
     </ContentPage.Content>
 </ContentPage>

@@ -25,6 +25,11 @@
                    Keyboard="Text"
                    IsPassword="True"
                    Placeholder="Mật khẩu" Grid.Row="2" />
+            <Entry x:Name="Matkhau_confirm_entry"
+                   ReturnType="Next"
+                   Keyboard="Text"
+                   IsPassword="True"
+                   Placeholder="Nhập lại Mật khẩu" Grid.Row="3" />
             <!--<DatePicker x:Name="Ngaysinh_entry" MinimumDate="01/01/1111"
                         MaximumDate="01/01/2023"
                         Date="01/01/1990" Grid.Row="3" />-->

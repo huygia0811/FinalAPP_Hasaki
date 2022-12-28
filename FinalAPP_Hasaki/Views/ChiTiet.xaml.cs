@@ -26,7 +26,7 @@ namespace FinalAPP_Hasaki.Views
         {
             HttpClient httpClient = new HttpClient();
             //192.168.1.13
-            var product_details = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetDetailSP?masp=" + product_id.ToString());
+            var product_details = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetDetailSP?masp=" + product_id.ToString());
             var product_details_Converted = JsonConvert.DeserializeObject<List<Product>>(product_details);
             Product_details.ItemsSource= product_details_Converted;
         }
