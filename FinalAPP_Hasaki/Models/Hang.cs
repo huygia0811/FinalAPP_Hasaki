@@ -8,6 +8,6 @@ namespace FinalAPP_Hasaki.Models
     {
         public int MAHANG { get; set; }
         public string TENHANG { get; set; }
-        public string TENSP { get; set; }
+        public string URL_IMAGE_HANG { get; set; }
     }
 }
