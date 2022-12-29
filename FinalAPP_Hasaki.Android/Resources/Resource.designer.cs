@@ -14,7 +14,7 @@ namespace FinalAPP_Hasaki.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
 	public partial class Resource
 	{
 		
@@ -16619,61 +16619,61 @@ namespace FinalAPP_Hasaki.Droid
 			public const int avd_show_password = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int btn_checkbox_checked_mtrl = 2131165301;
+			public const int bodycareicon = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165302;
+			public const int btn_checkbox_checked_mtrl = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int btn_checkbox_unchecked_mtrl = 2131165303;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165304;
+			public const int btn_checkbox_unchecked_mtrl = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int btn_radio_off_mtrl = 2131165305;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165306;
+			public const int btn_radio_off_mtrl = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int btn_radio_on_mtrl = 2131165307;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165308;
+			public const int btn_radio_on_mtrl = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int ca_nhan = 2131165309;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int chuc_nang = 2131165310;
+			public const int clear_button_icon = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int clear_button_icon = 2131165311;
+			public const int cosmeticicon = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int co_the = 2131165312;
+			public const int design_fab_background = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int da_mat = 2131165313;
+			public const int design_ic_visibility = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int design_fab_background = 2131165314;
+			public const int design_ic_visibility_off = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int design_ic_visibility = 2131165315;
+			public const int design_password_eye = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int design_ic_visibility_off = 2131165316;
+			public const int design_snackbar_background = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int design_password_eye = 2131165317;
+			public const int DownButton = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int design_snackbar_background = 2131165318;
+			public const int functionalfoodicon = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int DownButton = 2131165319;
+			public const int haircareicon = 2131165319;
 			
 			// aapt resource value: 0x7F070092
 			public const int hotdealsicon = 2131165330;
@@ -16745,67 +16745,67 @@ namespace FinalAPP_Hasaki.Droid
 			public const int ktdonhangicon = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int material_cursor_drawable = 2131165343;
+			public const int makeupicon = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int material_ic_calendar_black_24dp = 2131165344;
+			public const int material_cursor_drawable = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int material_ic_clear_black_24dp = 2131165345;
+			public const int material_ic_calendar_black_24dp = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int material_ic_edit_black_24dp = 2131165346;
+			public const int material_ic_clear_black_24dp = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165347;
+			public const int material_ic_edit_black_24dp = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165348;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165349;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165350;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165351;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165352;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int mtrl_dialog_background = 2131165353;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int mtrl_dropdown_arrow = 2131165354;
+			public const int mtrl_dialog_background = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int mtrl_ic_arrow_drop_down = 2131165355;
+			public const int mtrl_dropdown_arrow = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int mtrl_ic_arrow_drop_up = 2131165356;
+			public const int mtrl_ic_arrow_drop_down = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int mtrl_ic_cancel = 2131165357;
+			public const int mtrl_ic_arrow_drop_up = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int mtrl_ic_error = 2131165358;
+			public const int mtrl_ic_cancel = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int mtrl_navigation_bar_item_background = 2131165359;
+			public const int mtrl_ic_error = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int mtrl_popupmenu_background = 2131165360;
+			public const int mtrl_navigation_bar_item_background = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int mtrl_popupmenu_background_dark = 2131165361;
+			public const int mtrl_popupmenu_background = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int mtrl_tabs_default_indicator = 2131165362;
+			public const int mtrl_popupmenu_background_dark = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int my_pham = 2131165363;
+			public const int mtrl_tabs_default_indicator = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
 			public const int navigation_empty_icon = 2131165364;
@@ -16847,46 +16847,46 @@ namespace FinalAPP_Hasaki.Droid
 			public const int notify_panel_notification_icon_bg = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int nuoc_hoa = 2131165377;
+			public const int perfumeicon = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int preference_list_divider_material = 2131165378;
+			public const int personalcareicon = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int qltkicon = 2131165379;
+			public const int preference_list_divider_material = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int questionmarkicon = 2131165380;
+			public const int qltkicon = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int shoppingcarticon = 2131165381;
+			public const int questionmarkicon = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int slider = 2131165382;
+			public const int shoppingcarticon = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int test_custom_background = 2131165383;
+			public const int skincareicon = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int thongbaoicon = 2131165384;
+			public const int slider = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int thuonghieuicon = 2131165385;
+			public const int test_custom_background = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int toc_da = 2131165386;
+			public const int thongbaoicon = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int tooltip_frame_dark = 2131165387;
+			public const int thuonghieuicon = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int tooltip_frame_light = 2131165388;
+			public const int tooltip_frame_dark = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int tooltip_frame_light = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
 			public const int trangchuicon = 2131165390;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int trang_diem = 2131165389;
 			
 			// aapt resource value: 0x7F0700CF
 			public const int UpButton = 2131165391;
