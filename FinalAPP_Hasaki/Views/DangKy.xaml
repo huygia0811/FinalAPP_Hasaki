@@ -14,7 +14,7 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <Entry x:Name="HoTen_Entry" ReturnType="Next" Keyboard="Text" Placeholder="Họ và tên" Grid.Row="0" />
+            <!--<Entry x:Name="HoTen_Entry" ReturnType="Next" Keyboard="Text" Placeholder="Họ và tên" Grid.Row="0" />-->
             <Entry x:Name="SDT_entry"
                    ReturnType="Next"
                    Keyboard="Numeric"

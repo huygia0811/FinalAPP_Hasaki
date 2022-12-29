@@ -30,7 +30,7 @@ namespace FinalAPP_Hasaki.Views
         {
             HttpClient httpClient = new HttpClient();
             //192.168.1.13
-            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetSPByHang?mahang=" + mahang.ToString());
+            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByHang?mahang=" + mahang.ToString());
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             Homeproduct.ItemsSource = subjectlistConverted;
         }
@@ -38,7 +38,7 @@ namespace FinalAPP_Hasaki.Views
         {
             HttpClient httpClient = new HttpClient();
             //192.168.1.13
-            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.6/webapifinalhasaki/api/ServiceController/GetHang");
+            var subjectlist = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetHang");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Hang>>(subjectlist);
             Thuonghieu_noibat.ItemsSource = subjectlistConverted;
         }
