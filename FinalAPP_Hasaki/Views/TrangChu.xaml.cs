@@ -32,7 +32,6 @@ namespace FinalAPP_Hasaki.Views
         async void hienthihang()
         {
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "GetHang");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Hang>>(subjectlist);
             Thuonghieu_noibat.ItemsSource = subjectlistConverted;     
@@ -41,7 +40,6 @@ namespace FinalAPP_Hasaki.Views
         async void hienthiproduct()
         {
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "GetSPByLoai?maloai=5");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             Homeproduct1.ItemsSource = subjectlistConverted;
@@ -52,42 +50,42 @@ namespace FinalAPP_Hasaki.Views
 
         private void Ca_nhan_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(6));
         }
 
         private void Da_mat_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(2));
         }
 
         private void Toc_da_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(4));
         }
 
         private void Co_the_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(5));
         }
 
         private void My_pham_tapped(object sender, EventArgs e)
         {
-            DisplayAlert("thong bao", "sadasdasd", "dong");
+            Navigation.PushAsync(new SPByLoai(1));
         }
 
         private void Nuoc_hoa_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(7));
         }
 
         private void Chuc_nang_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(8));
         }
 
         private void trang_diem_tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new SPByLoai(3));
         }
 
         private void Homeproduct1_selection_changed(object sender, SelectionChangedEventArgs e)
@@ -96,8 +94,7 @@ namespace FinalAPP_Hasaki.Views
             if(product!=null)
             {
                 Navigation.PushAsync(new ChiTiet(product));
-            }    
-            
+            }         
             Homeproduct1.SelectedItem = null;
         }
 
@@ -108,7 +105,6 @@ namespace FinalAPP_Hasaki.Views
             {
                 Navigation.PushAsync(new ChiTiet(product));
             }
-
             Homeproduct2.SelectedItem = null;
         }
 
@@ -119,7 +115,6 @@ namespace FinalAPP_Hasaki.Views
             {
                 Navigation.PushAsync(new ThuongHieu(hang));
             }
-
             Thuonghieu_noibat.SelectedItem = null;
         }
     }

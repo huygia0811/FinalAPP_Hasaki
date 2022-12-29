@@ -6,6 +6,6 @@ namespace FinalAPP_Hasaki
 {
     public class IPaddress
     {
-        public static string url = "http://192.168.1.13/webapifinalhasaki/api/ServiceController/";
+        public static string url = "http://192.168.1.6/webapifinalhasaki/api/ServiceController/";
     }
 }

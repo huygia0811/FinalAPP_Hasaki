@@ -51,5 +51,15 @@ namespace FinalAPP_Hasaki.Views
             }
             Thuonghieu_noibat.SelectedItem = null;
         }
+
+        private void Homeproduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Product product = (Product)e.CurrentSelection.FirstOrDefault();
+            if (product != null)
+            {
+                Navigation.PushAsync(new ChiTiet(product));
+            }
+            Homeproduct.SelectedItem = null;
+        }
     }
 }

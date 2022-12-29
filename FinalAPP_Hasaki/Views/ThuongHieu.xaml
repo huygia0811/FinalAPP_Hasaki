@@ -54,7 +54,9 @@
                     </CollectionView>
                 </Grid>
 
-                <CollectionView x:Name="Homeproduct">
+                <CollectionView x:Name="Homeproduct"
+                                SelectionMode="Single"
+                                SelectionChanged="Homeproduct_SelectionChanged">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical"
                                          Span="2"
