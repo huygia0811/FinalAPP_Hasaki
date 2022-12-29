@@ -48,9 +48,6 @@ namespace FinalAPP_Hasaki.Views
             var subjectlist2 = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=6");
             var subjectlistConverted2 = JsonConvert.DeserializeObject<List<Product>>(subjectlist2);
             Homeproduct2.ItemsSource = subjectlistConverted2;
-            var subjectlist3 = await httpClient.GetStringAsync("http://192.168.1.13/webapifinalhasaki/api/ServiceController/GetSPByLoai?maloai=7");
-            var subjectlistConverted3 = JsonConvert.DeserializeObject<List<Product>>(subjectlist3);
-            Homeproduct3.ItemsSource = subjectlistConverted3;
         }
 
         private void Ca_nhan_tapped(object sender, EventArgs e)
@@ -115,15 +112,15 @@ namespace FinalAPP_Hasaki.Views
             Homeproduct2.SelectedItem = null;
         }
 
-        private void Homeproduct3_selection_changed(object sender, SelectionChangedEventArgs e)
+        private void Thuonghieu_noibat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Product product = (Product)e.CurrentSelection.FirstOrDefault();
-            if (product != null)
+            Hang hang = (Hang)e.CurrentSelection.FirstOrDefault();
+            if (hang != null)
             {
-                Navigation.PushAsync(new ChiTiet(product));
+                Navigation.PushAsync(new ThuongHieu(hang));
             }
 
-            Homeproduct3.SelectedItem = null;
+            Thuonghieu_noibat.SelectedItem = null;
         }
     }
 }
