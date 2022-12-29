@@ -21,5 +21,10 @@ namespace FinalAPP_Hasaki.Views
         {
             Navigation.PushAsync(new DangKy());
         }
+
+        private void Testdangnhap_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DangNhap());
+        }
     }
 }

@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalAPP_Hasaki.Views.DangNhap">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="10,40,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Entry x:Name="Entry_Sodienthoai" Placeholder="Số điện thoại" Grid.Row="0"/>
+            <Entry x:Name="Entry_Matkhau" Placeholder="Mật Khẩu" Grid.Row="1"/>
+            <Label Text="Quên mật khẩu" HorizontalOptions="End" Grid.Row="2"/>
+            <Button x:Name="Dang_nhap" Text="ĐĂNG NHẬP" Grid.Row="3" Clicked="Dang_nhap_clicked"/>
+            <Button x:Name="Dang_Ky" Text="BẠN CHƯA CÓ TÀI KHOẢN? ĐĂNG KÝ" Grid.Row="4"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

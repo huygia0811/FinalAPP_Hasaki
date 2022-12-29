@@ -5,7 +5,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="Testdangky" Text="test dangky" Clicked="Testdangky_Clicked" BackgroundColor="red"/>
+            <Button x:Name="Testdangnhap" Text="test dangky" Clicked="Testdangnhap_Clicked" BackgroundColor="red"/>
         </StackLayout>
-  
+       
+            
+
+
     </ContentPage.Content>
 </ContentPage>

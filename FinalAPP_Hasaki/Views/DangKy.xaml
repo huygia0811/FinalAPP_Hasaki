@@ -14,11 +14,15 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <!--<Entry x:Name="HoTen_Entry" ReturnType="Next" Keyboard="Text" Placeholder="Họ và tên" Grid.Row="0" />-->
             <Entry x:Name="SDT_entry"
                    ReturnType="Next"
                    Keyboard="Numeric"
                    Placeholder="Số điện thoại"
+                   Grid.Row="0" />
+            <Entry x:Name="Email_entry"
+                   ReturnType="Next"
+                   Keyboard="Email"
+                   Placeholder="Email"
                    Grid.Row="1" />
             <Entry x:Name="Matkhau_entry"
                    ReturnType="Next"
@@ -30,14 +34,6 @@
                    Keyboard="Text"
                    IsPassword="True"
                    Placeholder="Nhập lại Mật khẩu" Grid.Row="3" />
-            <!--<DatePicker x:Name="Ngaysinh_entry" MinimumDate="01/01/1111"
-                        MaximumDate="01/01/2023"
-                        Date="01/01/1990" Grid.Row="3" />-->
-            <!--<StackLayout Orientation="Horizontal" Grid.Row="4">
-                <RadioButton Content="Nam" />
-                <RadioButton Content="Nữ"
-                             IsChecked="true" />
-            </StackLayout>-->
             <Label Grid.Row="5"                
                    Text="Khi bạn đăng ký là bạn sẽ chấp nhận điều khoản sử dụng" />
             <Button x:Name="click_dangky"
