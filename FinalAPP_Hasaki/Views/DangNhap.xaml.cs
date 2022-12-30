@@ -26,9 +26,9 @@ namespace FinalAPP_Hasaki.Views
             if (nd.SODIENTHOAI != "" && nd.MATKHAU != null)
             {
                 await DisplayAlert("Thông báo", "test dang nhaopaj đúng " + nd.SODIENTHOAI, "OK");
-                NguoiDung.nguoidung = nd;
-                await DisplayAlert("TB", "test makh :" + NguoiDung.nguoidung.SODIENTHOAI, "OK");
-
+                currentNguoiDung.MAKH = nd.MAKH;
+                currentNguoiDung.SDT = nd.SODIENTHOAI;
+                await DisplayAlert("Thông báo", "MAKH: " + currentNguoiDung.MAKH.ToString(), "OK");
             }
             else
                 await DisplayAlert("TB", " Đăng Nhập Sai :", "OK");

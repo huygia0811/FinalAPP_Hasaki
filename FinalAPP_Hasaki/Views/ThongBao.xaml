@@ -4,7 +4,7 @@
              x:Class="FinalAPP_Hasaki.Views.ThongBao">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="tesst" Clicked="tesst_Clicked"/>
+            <Button x:Name="tesst"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

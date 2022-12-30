@@ -11,7 +11,7 @@ namespace FinalAPP_Hasaki
             InitializeComponent();
 
             MainPage = new MainPage();
-            NguoiDung.nguoidung = new NguoiDung();
+            /*NguoiDung.nguoidung = new NguoiDung();*/
         }
 
         protected override void OnStart()

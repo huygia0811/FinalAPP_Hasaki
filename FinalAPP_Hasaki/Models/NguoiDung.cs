@@ -10,6 +10,5 @@ namespace FinalAPP_Hasaki.Models
         public string SODIENTHOAI { get; set; }
         public string MATKHAU { get; set; }
         public string EMAIL { get; set; }
-        public static NguoiDung nguoidung;
     }
 }

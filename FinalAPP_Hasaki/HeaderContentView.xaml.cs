@@ -14,7 +14,26 @@ namespace FinalAPP_Hasaki
     {
         public HeaderContentView()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            
+            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
+            {
+                // do something every 60 seconds
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    HiddenLabel();
+                });
+                return true; // runs again, or false to stop
+            });
+        }
+        public void HiddenLabel()
+        {
+            if(currentNguoiDung.MAKH > 0)
+            {
+                lbdangnhap.IsVisible = false;
+                lbdangky.IsVisible = false;
+
+            }
         }
         private void Link_dang_nhap(object sender, EventArgs e)
         {

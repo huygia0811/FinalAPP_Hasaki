@@ -14,16 +14,7 @@ namespace FinalAPP_Hasaki.Views
     {
         public ThongBao()
         {
-            InitializeComponent();
-            if (NguoiDung.nguoidung.MAKH > 0)
-            {
-                Title = "hehe";
-            }
-        }
-
-        private async void tesst_Clicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("tb", NguoiDung.nguoidung.MAKH.ToString(), "ok");
+            InitializeComponent();          
         }
     }
 }
