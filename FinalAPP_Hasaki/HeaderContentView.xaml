@@ -5,13 +5,18 @@
              HeightRequest="200">
     <Grid BackgroundColor="#326e52"
                   HeightRequest="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="></RowDefinition>
+
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <StackLayout Padding="10,0,10,20"
-                             VerticalOptions="EndAndExpand" Orientation="Horizontal" Grid.Column="0">
+                             VerticalOptions="EndAndExpand" Orientation="Vertical" Grid.Column="0">
             <Label Text="Đăng nhập"
                    TextColor="White"
                    FontAttributes="Bold"
@@ -33,6 +38,35 @@
                     <TapGestureRecognizer Tapped="Link_dang_ky"/>
                 </Label.GestureRecognizers>
             </Label>
+            
+            
+
+
         </StackLayout>
+        <ListView x:Name="getsdt"  Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Text="032892123012"
+                                        TextColor="White"
+                                        FontAttributes="Bold"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center" 
+                                       Grid.Row="0"
+                                       >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Link_tai_khoan"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </ContentView>

@@ -7,6 +7,6 @@ namespace FinalAPP_Hasaki.Models
     public class currentNguoiDung
     {
         public static int MAKH;
-        public static string SDT;
+        public static string SDT { get; set; }
     }
 }
