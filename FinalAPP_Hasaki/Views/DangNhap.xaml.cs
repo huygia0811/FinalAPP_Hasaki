@@ -27,12 +27,17 @@ namespace FinalAPP_Hasaki.Views
             {
                 await DisplayAlert("Thông báo", "test dang nhaopaj đúng " + nd.SODIENTHOAI, "OK");
                 NguoiDung.nguoidung = nd;
-                await DisplayAlert("TB", "test makh :" + NguoiDung.nguoidung.MAKH, "OK");
+                await DisplayAlert("TB", "test makh :" + NguoiDung.nguoidung.SODIENTHOAI, "OK");
 
             }
             else
                 await DisplayAlert("TB", " Đăng Nhập Sai :", "OK");
 
+        }
+
+        private void Dang_Ky_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DangKy());
         }
     }
 }

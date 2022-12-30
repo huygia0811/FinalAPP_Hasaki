@@ -38,10 +38,20 @@ namespace FinalAPP_Hasaki.Views
 			var kqtv = await kq.Content.ReadAsStringAsync();
 			nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
 			if (nd.MAKH > 0)
+            {
 				await DisplayAlert("Thông báo", "Thêm Người dùng thành công" + nd.EMAIL, "ok");
+				Navigation.PushAsync(new DangNhap());
+			}				
+				
+
 			else
 				await DisplayAlert("Thông báo", "Tên Đăng Nhập Đã Có" + nd.EMAIL, "ok");
 
 		}
-	}
+
+        private void Dang_Nhap_Clicked(object sender, EventArgs e)
+        {
+			Navigation.PushAsync(new DangNhap());
+        }
+    }
 }

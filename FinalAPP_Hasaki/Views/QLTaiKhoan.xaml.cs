@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using FinalAPP_Hasaki.Models;
 namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,8 +15,9 @@ namespace FinalAPP_Hasaki.Views
         public QLTaiKhoan()
         {
             InitializeComponent();
+            
         }
-
+       
         private void Testdangky_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DangKy());

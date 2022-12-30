@@ -45,7 +45,7 @@
             <Button Grid.Row="7"                    
                     Text="Bạn đã có tài khoản? Đăng nhập"                  
                     TextColor="green"
-                    BackgroundColor="White" />
+                    BackgroundColor="White" Clicked="Dang_Nhap_Clicked"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

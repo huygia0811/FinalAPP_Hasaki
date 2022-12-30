@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalAPP_Hasaki.HeaderContentView" 
              HeightRequest="200">
-    <!--<Grid BackgroundColor="#326e52"
+    <Grid BackgroundColor="#326e52"
                   HeightRequest="200">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -31,5 +31,5 @@
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
-    </Grid>-->
+    </Grid>
 </ContentView>

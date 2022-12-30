@@ -15,7 +15,7 @@
             <Entry x:Name="Entry_Matkhau" Placeholder="Mật Khẩu" Grid.Row="1"/>
             <Label Text="Quên mật khẩu" HorizontalOptions="End" Grid.Row="2"/>
             <Button x:Name="Dang_nhap" Text="ĐĂNG NHẬP" Grid.Row="3" Clicked="Dang_nhap_clicked"/>
-            <Button x:Name="Dang_Ky" Text="BẠN CHƯA CÓ TÀI KHOẢN? ĐĂNG KÝ" Grid.Row="4"/>
+            <Button x:Name="Dang_Ky" Text="BẠN CHƯA CÓ TÀI KHOẢN? ĐĂNG KÝ" Grid.Row="4" Clicked="Dang_Ky_Clicked"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
