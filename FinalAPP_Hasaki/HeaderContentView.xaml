@@ -7,7 +7,7 @@
                   HeightRequest="200">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
