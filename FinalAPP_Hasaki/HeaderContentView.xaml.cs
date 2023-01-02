@@ -12,6 +12,9 @@ namespace FinalAPP_Hasaki
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HeaderContentView : ContentView
     {
+
+        public List<currentNguoiDung> DSProduct = new List<currentNguoiDung>();
+
         public HeaderContentView()
         {
             InitializeComponent();
