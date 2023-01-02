@@ -120,7 +120,6 @@
                                                                          Grid.Column="1">
                                                             <numeric:SfNumericUpDown x:Name="sfNumericUpDown"
                                                                                          StepValue="1"
-                                                                                         AutoReverse="true"
                                                                                          Minimum="1"
                                                                                          Maximum="60"
                                                                                          HeightRequest="30"
@@ -225,6 +224,7 @@
                                             Grid.Row="0"
                                             Grid.Column="0" />
                                     <Button Text="MUA NGAY"
+                                            Clicked="Button_Clicked"
                                             Grid.Row="0"
                                             Grid.Column="1"
                                             BackgroundColor="red" />

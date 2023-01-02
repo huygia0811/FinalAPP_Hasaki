@@ -8,11 +8,14 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Syncfusion.SfNumericUpDown.XForms;
+
 namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChiTiet : ContentPage
     {
+        int masp;
         public ChiTiet()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace FinalAPP_Hasaki.Views
         public ChiTiet(Product product)
         {
             InitializeComponent();
+            masp = product.MASP;
             GetDetailsProduct(product.MASP);
         }
         async void GetDetailsProduct(int product_id)
@@ -29,6 +33,20 @@ namespace FinalAPP_Hasaki.Views
             var product_details = await httpClient.GetStringAsync(IPaddress.url + "GetDetailSP?masp=" + product_id.ToString());
             var product_details_Converted = JsonConvert.DeserializeObject<List<Product>>(product_details);
             Product_details.ItemsSource= product_details_Converted;
+        }
+
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+            HttpClient http = new HttpClient();
+            if(currentNguoiDung.MAKH == null)
+            {
+                await DisplayAlert("TB", "Vui lòng đăng nhập!", "OK");
+            }
+            else
+            {
+                await DisplayAlert("TB", "Đã thêm sản phẩm vào giỏ hàng" + currentNguoiDung.MAKH.ToString() + masp.ToString(), "OK");
+                await http.GetStringAsync(IPaddress.url + "ThemGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString() + "&soluong=1");
+            }                 
         }
     }
 }
