@@ -16,6 +16,7 @@ namespace FinalAPP_Hasaki.Views
     public partial class ChiTiet : ContentPage
     {
         int masp;
+        int value;
         public ChiTiet(Product product)
         {
             InitializeComponent();
@@ -38,9 +39,14 @@ namespace FinalAPP_Hasaki.Views
             }
             else
             {               
-                await http.GetStringAsync(IPaddress.url + "ThemGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString() + "&soluong=1");
-                await DisplayAlert("TB", "Đã thêm sản phẩm vào giỏ hàng" + currentNguoiDung.MAKH.ToString() + masp.ToString(), "OK");
+                await http.GetStringAsync(IPaddress.url + "ThemGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString() + "&soluong=" + value.ToString());
+                await DisplayAlert("Thông báo", "Đã thêm sản phẩm vào giỏ hàng!", "OK");
             }                 
+        }
+
+        private void sfNumericUpDown_ValueChanged(object sender, ValueEventArgs e)
+        {
+            value = Convert.ToInt32(e.Value);
         }
     }
 }
