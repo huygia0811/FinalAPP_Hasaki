@@ -22,11 +22,26 @@ namespace FinalAPP_Hasaki.Views
 
         private void TIKTDH_Clicked(object sender, EventArgs e)
         {
-
+            if (currentNguoiDung.MAKH == 0)
+            {
+                Navigation.PushAsync(new DangNhap());
+            }
+            else
+            {
+                Navigation.PushAsync(new DonHang());
+            }
         }
-
         private void TIgiohang_Clicked(object sender, EventArgs e)
         {
+
+            if (currentNguoiDung.MAKH == 0)
+            {
+                Navigation.PushAsync(new DangNhap());
+            }
+            else
+            {
+                Navigation.PushAsync(new GioHang());
+            }
 
         }
         async void hienthihang()

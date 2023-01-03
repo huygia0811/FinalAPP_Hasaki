@@ -16,10 +16,6 @@ namespace FinalAPP_Hasaki.Views
     public partial class ChiTiet : ContentPage
     {
         int masp;
-        public ChiTiet()
-        {
-            InitializeComponent();
-        }
         public ChiTiet(Product product)
         {
             InitializeComponent();
@@ -29,23 +25,21 @@ namespace FinalAPP_Hasaki.Views
         async void GetDetailsProduct(int product_id)
         {
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var product_details = await httpClient.GetStringAsync(IPaddress.url + "GetDetailSP?masp=" + product_id.ToString());
             var product_details_Converted = JsonConvert.DeserializeObject<List<Product>>(product_details);
             Product_details.ItemsSource= product_details_Converted;
         }
-
         async private void Button_Clicked(object sender, EventArgs e)
         {
             HttpClient http = new HttpClient();
-            if(currentNguoiDung.MAKH == null)
+            if(currentNguoiDung.MAKH == 0)
             {
                 await DisplayAlert("TB", "Vui lòng đăng nhập!", "OK");
             }
             else
-            {
-                await DisplayAlert("TB", "Đã thêm sản phẩm vào giỏ hàng" + currentNguoiDung.MAKH.ToString() + masp.ToString(), "OK");
+            {               
                 await http.GetStringAsync(IPaddress.url + "ThemGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString() + "&soluong=1");
+                await DisplayAlert("TB", "Đã thêm sản phẩm vào giỏ hàng" + currentNguoiDung.MAKH.ToString() + masp.ToString(), "OK");
             }                 
         }
     }
