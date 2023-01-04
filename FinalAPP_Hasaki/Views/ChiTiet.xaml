@@ -127,6 +127,7 @@
                                                                                          AllowNull="false"
                                                                                          TextAlignment="Center"
                                                                                          SpinButtonAlignment="Both"
+                                                                                         ValueChanged="sfNumericUpDown_ValueChanged"
                                                                                          FormatString="n" />
                                                         </StackLayout>
                                                     </Grid>
