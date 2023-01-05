@@ -14,8 +14,14 @@ namespace FinalAPP_Hasaki.Views
     public partial class DonHang : ContentPage
     {
         public DonHang()
+        {         
+            InitializeComponent();             
+        }
+        public DonHang(int a)
         {
             InitializeComponent();
+            hienthidonhang(a);
+
         }
 
         private void tapped_tatca(object sender, EventArgs e)

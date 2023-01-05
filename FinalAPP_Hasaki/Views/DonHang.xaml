@@ -52,22 +52,26 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid BackgroundColor="White" Margin="0,5,0,5">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <StackLayout Orientation="Horizontal" Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
                                     <Label Text="#" FontSize="20"/>
                                     <Label Text="{Binding SOHD}" FontSize="20"/>
                                     <Label Text="|"  FontSize="20"/>
                                     <Label Text="{Binding NGHD}"  FontSize="20"/>
                                 </StackLayout>
-                                <Image  Source="{Binding URL_IMAGE}" Grid.Row="1" HeightRequest="150"/>
-                                <Label Grid.Row="2" Text="{Binding GIA , StringFormat='{0:0,0 đ}'}" FontSize="20" TextColor="red"/>
-                                <Button Text="Mua Lại" Grid.Row="3" HorizontalOptions="Start" Clicked="button_mualai" BackgroundColor="Orange"/>
+                                <Image  Source="{Binding URL_IMAGE}" Grid.Row="1" Grid.Column="0" HeightRequest="150"/>
+                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding GIA , StringFormat='{0:0,0 đ}'}" FontSize="20" TextColor="red"/>
+                                <Button Text="Mua Lại" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" Clicked="button_mualai" BackgroundColor="Orange" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
