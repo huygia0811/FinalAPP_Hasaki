@@ -8,9 +8,11 @@
     <Shell.FlyoutHeader>
         <local:HeaderContentView></local:HeaderContentView>
     </Shell.FlyoutHeader>
-
+    <ShellItem Route="waiting" IsVisible="True" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate views:Waiting_page}"/>
+    </ShellItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
-        <Tab Icon="trangchuicon.png" Title="Trang chủ">
+        <Tab Route="TrangChu" Icon="trangchuicon.png" Title="Trang chủ">
             <ShellContent ContentTemplate="{DataTemplate views:TrangChu}"/>
         </Tab>
         <Tab Icon="thongbaoicon.png" Title="Thông báo">
