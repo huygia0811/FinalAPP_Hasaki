@@ -15,10 +15,18 @@ namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GioHang : ContentPage
-    {   
+    {
+        long TOTAL { get; set; } = 0;
         public GioHang()
         {
             InitializeComponent();
+            HienThiGioHang();
+            BindingContext = this;
+        }
+        async public void XuatTotal()
+        {
+            HttpClient httpClient = new HttpClient();
+            var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "TongTienGH?MAKH=" + currentNguoiDung.MAKH.ToString());
         }
         async public void HienThiGioHang()
         {
@@ -27,7 +35,6 @@ namespace FinalAPP_Hasaki.Views
             var subjectlistConverted = JsonConvert.DeserializeObject<List<classGioHang>>(subjectlist);
             CV_GioHang.ItemsSource= subjectlistConverted;
         }
-
         async private void sfNumericUpDown_ValueChanged(object sender, Syncfusion.SfNumericUpDown.XForms.ValueEventArgs e)
         {
             SfNumericUpDown bt = (SfNumericUpDown)sender;
@@ -49,6 +56,14 @@ namespace FinalAPP_Hasaki.Views
                 HttpClient httpClient = new HttpClient();
                 await httpClient.GetStringAsync(IPaddress.url + "DropSPGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString());
             }   
+        }
+
+        async private void dathang_Clicked(object sender, EventArgs e)
+        {
+            HttpClient httpClient = new HttpClient();
+            await httpClient.GetStringAsync(IPaddress.url + "DatHang?MAKH=" + currentNguoiDung.MAKH.ToString());
+            await DisplayAlert("Thông báo", "Bạn đã đặt hàng thành công", "OK");
+            Navigation.PopAsync();
         }
     }
 }
