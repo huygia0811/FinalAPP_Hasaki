@@ -63,6 +63,7 @@ namespace FinalAPP_Hasaki.Views
             HttpClient httpClient = new HttpClient();
             await httpClient.GetStringAsync(IPaddress.url + "DatHang?MAKH=" + currentNguoiDung.MAKH.ToString());
             await DisplayAlert("Thông báo", "Bạn đã đặt hàng thành công", "OK");
+            Navigation.PopAsync();
         }
     }
 }
