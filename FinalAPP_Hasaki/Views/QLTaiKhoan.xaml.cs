@@ -68,7 +68,7 @@ namespace FinalAPP_Hasaki.Views
 
         private void tapped_capnhapdiachi(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ThongBao());
+            Navigation.PushAsync(new Page_Set_DiaChi());
         }
     }
 }

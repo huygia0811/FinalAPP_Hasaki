@@ -25,13 +25,11 @@ namespace FinalAPP_Hasaki.Views
             var nd = JsonConvert.DeserializeObject<NguoiDung>(kq);
             if (nd.SODIENTHOAI != "" && nd.MATKHAU != null)
             {
-                await DisplayAlert("Thông báo", "test dang nhaopaj đúng " + nd.SODIENTHOAI, "OK");
-                currentNguoiDung.MAKH = nd.MAKH;
-                currentNguoiDung.SDT = nd.SODIENTHOAI;
-                await DisplayAlert("Thông báo", "MAKH: " + currentNguoiDung.MAKH.ToString(), "OK");
+                await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
+                Navigation.PushAsync(new TrangChu());
             }
             else
-                await DisplayAlert("TB", " Đăng Nhập Sai :", "OK");
+                await DisplayAlert("Thông báo", "Tên đăng nhập hoặt mật khẩu không chính xác", "OK");
 
         }
 
