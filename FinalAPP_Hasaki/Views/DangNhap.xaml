@@ -33,7 +33,7 @@
             </Frame>
             <Label Text="Quên mật khẩu" HorizontalOptions="End" Grid.Row="3">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer></TapGestureRecognizer>
+                    <TapGestureRecognizer Tapped="tapped_getcode"/>
                 </Label.GestureRecognizers>
             </Label>
             <Button x:Name="Dang_nhap" Text="ĐĂNG NHẬP" TextColor="White" Grid.Row="4" Clicked="Dang_nhap_clicked" BackgroundColor="Green"/>

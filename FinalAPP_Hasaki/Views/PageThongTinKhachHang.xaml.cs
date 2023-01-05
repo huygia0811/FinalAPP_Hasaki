@@ -63,5 +63,10 @@ namespace FinalAPP_Hasaki.Views
         {
             Navigation.PushAsync(new Page_Set_CCCD());
         }
+
+        private void tapped_doimatkhau(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DoiMatKhau());
+        }
     }
 }

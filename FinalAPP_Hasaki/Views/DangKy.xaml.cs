@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Security.Cryptography;
 namespace FinalAPP_Hasaki.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -17,8 +18,21 @@ namespace FinalAPP_Hasaki.Views
         {
             InitializeComponent();
 		}
+		public static HashSalt GenerateSaltedHash(int size, string password)
+		{
+			var saltBytes = new byte[size];
+			var provider = new RNGCryptoServiceProvider();
+			provider.GetNonZeroBytes(saltBytes);
+			var salt = Convert.ToBase64String(saltBytes);
 
-        private async void dangky_buttonclick(object sender, EventArgs e)
+			var rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, saltBytes, 10000);
+			var hashPassword = Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256));
+
+			HashSalt hashSalt = new HashSalt { Hash = hashPassword, Salt = salt };
+			return hashSalt;
+		}
+
+		private async void dangky_buttonclick(object sender, EventArgs e)
         {
 			HttpClient http = new HttpClient();
 			if (Matkhau_entry.Text != Matkhau_confirm_entry.Text)
@@ -30,8 +44,9 @@ namespace FinalAPP_Hasaki.Views
             {
 				await DisplayAlert("Thông báo", "Vui lòng nhập đầy đủ", "OK");
 				return;
-			}				
-			NguoiDung nd = new NguoiDung {MATKHAU = Matkhau_entry.Text, SODIENTHOAI = SDT_entry.Text, EMAIL = Email_entry.Text };
+			}
+			HashSalt hashSalt = GenerateSaltedHash(64, Matkhau_entry.Text);
+			NguoiDung nd = new NguoiDung {MATKHAUHASH = hashSalt.Hash,MATKHAUSALT=hashSalt.Salt, SODIENTHOAI = SDT_entry.Text, EMAIL = Email_entry.Text };
 			string jsonlh = JsonConvert.SerializeObject(nd);
 			StringContent httcontent = new StringContent(jsonlh, Encoding.UTF8, "application/json");
 			HttpResponseMessage kq = await http.PostAsync(IPaddress.url + "DangKy", httcontent);
@@ -39,7 +54,7 @@ namespace FinalAPP_Hasaki.Views
 			nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
 			if (nd.MAKH > 0)
             {
-				await DisplayAlert("Thông báo", "Tạo tài khoản thành công.", "OK");
+				await DisplayAlert("Thông báo", "Tạo tài khoản thành công. "+ hashSalt.Hash, "OK");
 				Navigation.PushAsync(new DangNhap());
 			}				
 			else
