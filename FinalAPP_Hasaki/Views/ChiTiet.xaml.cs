@@ -16,7 +16,7 @@ namespace FinalAPP_Hasaki.Views
     public partial class ChiTiet : ContentPage
     {
         int masp;
-        int value;
+        int value = 1;
         public ChiTiet(Product product)
         {
             InitializeComponent();

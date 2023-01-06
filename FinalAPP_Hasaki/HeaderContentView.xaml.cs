@@ -12,24 +12,19 @@ namespace FinalAPP_Hasaki
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HeaderContentView : ContentView
     {
-
-        public List<currentNguoiDung> DSProduct = new List<currentNguoiDung>();
-
+        string sdt { get; set; } = "";
         public HeaderContentView()
         {
             InitializeComponent();
+            BindingContext = this;
             Device.StartTimer(new TimeSpan(0, 0, 1), () =>
-            {
-                // do something every 60 seconds
+            {               
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    HiddenLabel();
-
-                    
+                    HiddenLabel();             
                 });
-                return true; // runs again, or false to stop
+                return true;
             });
-           
         }
         
         public void HiddenLabel()
@@ -38,26 +33,27 @@ namespace FinalAPP_Hasaki
             {
                 lbdangnhap.IsVisible = false;
                 lbdangky.IsVisible = false;
-                string sdt = currentNguoiDung.SDT;
-                string[] getdt = new string []{ sdt };
-                getsdt.ItemsSource = getdt;
+                lbsdt.IsVisible = true;
+                sdt = currentNguoiDung.SDT;
             }
-
         }
       
         private void Link_dang_nhap(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DangNhap());
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private void Link_dang_ky(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DangKy());
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         private void Link_tai_khoan(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new  QLTaiKhoan());
+            Shell.Current.FlyoutIsPresented = false;
         }
     }
 }

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalAPP_Hasaki.Views.DatHang">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <ListView BackgroundColor="White"
+                      x:Name="lstdiachi"
+                      HasUnevenRows="True"
+                      ItemSelected="lstdiachi_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Text="Địa chỉ đơn hàng"
+                                       TextColor="Black"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       Grid.Row="0"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding HOTEN}"
+                                       TextColor="Black"
+                                       FontSize="15"
+                                       Grid.Row="1"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding SODIENTHOAI}"
+                                       TextColor="Black"
+                                       FontSize="15"
+                                       Grid.Row="2"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding DCHI}"
+                                       TextColor="Black"
+                                       FontSize="15"
+                                       Grid.Row="3"
+                                       Grid.Column="0"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            
+            <Button x:Name="dathang" Text="Tiến hành đặt hàng"
+                BackgroundColor="DarkOrange"
+                TextColor="White"
+                Clicked="dathang_Clicked"
+                FontSize="Large"
+                HeightRequest="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -35,6 +35,7 @@ namespace FinalAPP_Hasaki.Views
                 if (isPasswordMatched == true)
                 {
                     currentNguoiDung.MAKH = nd.MAKH;
+                    currentNguoiDung.SDT = nd.SODIENTHOAI;
                     await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
                     Navigation.PopAsync();
                 }           
