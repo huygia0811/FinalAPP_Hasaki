@@ -35,12 +35,17 @@ namespace FinalAPP_Hasaki.Views
                 if (isPasswordMatched == true)
                 {
                     currentNguoiDung.MAKH = nd.MAKH;
+                    currentNguoiDung.MATKHAUHASH = nd.MATKHAUHASH;
+                    currentNguoiDung.MATKHAUSALT = nd.MATKHAUSALT;
                     await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
                     Navigation.PopAsync();
                 }           
             }               
             else
+            {
                 await DisplayAlert("Thông báo", "Tên đăng nhập hoặt mật khẩu không chính xác", "OK");
+            }    
+               
 
         }
 

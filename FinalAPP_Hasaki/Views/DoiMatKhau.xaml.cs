@@ -37,10 +37,41 @@ namespace FinalAPP_Hasaki.Views
             HashSalt hashSalt = new HashSalt { Hash = hashPassword, Salt = salt };
             return hashSalt;
         }
-        private void click_doimatkhau(object sender, EventArgs e)
+        private async void click_doimatkhau(object sender, EventArgs e)
         {
-            //HttpClient http = new HttpClient();
-            //bool isPasswordMatched = VerifyPassword(entry_matkhaucu.Text, nd.MATKHAUHASH, nd.MATKHAUSALT);
+            HttpClient http = new HttpClient();
+            bool isPasswordMatched = VerifyPassword(entry_matkhaucu.Text, currentNguoiDung.MATKHAUHASH, currentNguoiDung.MATKHAUSALT);
+            if(isPasswordMatched)
+            {
+                if(entry_matkhaumoi.Text == entry_nhaplai.Text)
+                {
+                    HashSalt hashSalt = GenerateSaltedHash(64, entry_matkhaumoi.Text);
+                    NguoiDung nd = new NguoiDung { MAKH = currentNguoiDung.MAKH, MATKHAUHASH = hashSalt.Hash, MATKHAUSALT = hashSalt.Salt};
+                    string jsonlh = JsonConvert.SerializeObject(nd);
+                    StringContent httcontent = new StringContent(jsonlh, Encoding.UTF8, "application/json");
+                    HttpResponseMessage kq = await http.PostAsync(IPaddress.url + "DoiMatKhau", httcontent);
+                    var kqtv = await kq.Content.ReadAsStringAsync();
+                    nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
+                    if (nd.MAKH > 0)
+                    {
+                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công "+ hashSalt.Hash, "OK");
+                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công " + nd.MAKH, "OK");
+                        //Navigation.PushAsync(new DangNhap());
+                    }
+                    else
+                        await DisplayAlert("Thông báo", "Đã có lỗi xảy ra vui lòng thử lại sau", "OK");
+                }   
+                else
+                {
+                    await DisplayAlert("Thông báo", "Mật khẩu mới không khớp", "OK");
+
+                }    
+                
+            }
+            else
+            {
+                await DisplayAlert("Thông báo", "Mật khâu củ không đúng vui lòng thử lại sau" , "OK");
+            }
 
 
             //HashSalt hashSalt = GenerateSaltedHash(64, Matkhau_entry.Text);
