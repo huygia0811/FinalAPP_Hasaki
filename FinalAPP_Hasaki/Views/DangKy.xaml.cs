@@ -54,11 +54,11 @@ namespace FinalAPP_Hasaki.Views
 			nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
 			if (nd.MAKH > 0)
             {
-				await DisplayAlert("Thông báo", "Tạo tài khoản thành công. "+ hashSalt.Hash, "OK");
+				await DisplayAlert("Thông báo", "Tạo tài khoản thành công. ", "OK");
 				Navigation.PushAsync(new DangNhap());
 			}				
 			else
-				await DisplayAlert("Thông báo", "Tên số điện thoại " +nd.SODIENTHOAI +" Đã tồn tại.", "OK");
+				await DisplayAlert("Thông báo", "Số điện thoại " +nd.SODIENTHOAI +" Đã tồn tại.", "OK");
 
 		}
 

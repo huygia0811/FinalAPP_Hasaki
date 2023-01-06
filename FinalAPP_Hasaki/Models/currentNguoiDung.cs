@@ -8,5 +8,7 @@ namespace FinalAPP_Hasaki.Models
     {
         public static int MAKH;
         public static string SDT { get; set; }
+        public static string MATKHAUHASH { get; set; }
+        public static string MATKHAUSALT { get; set; }
     }
 }
