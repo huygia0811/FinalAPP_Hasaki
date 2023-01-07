@@ -9,7 +9,9 @@
               RowHeight="200"
               HasUnevenRows="True"
               SeparatorColor="LightGray"
-              SeparatorVisibility="Default">
+              SeparatorVisibility="Default"
+              IsPullToRefreshEnabled="True"
+              RefreshControlColor="Red">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -83,7 +85,9 @@
         <ListView x:Name="lstTongTien_GH"      
                   HasUnevenRows="True"
                   HeightRequest="50"
-                  BackgroundColor="LightGray">
+                  BackgroundColor="LightGray"
+                  IsPullToRefreshEnabled="True"
+                  RefreshControlColor="Red">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

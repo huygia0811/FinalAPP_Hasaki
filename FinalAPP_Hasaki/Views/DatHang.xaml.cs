@@ -19,6 +19,8 @@ namespace FinalAPP_Hasaki.Views
         {
             InitializeComponent();
             HienThiDiaChi();
+            HienThiGioHang();
+            KhoiTaoPicker();
         }
         async public void HienThiDiaChi()
         {
@@ -27,9 +29,16 @@ namespace FinalAPP_Hasaki.Views
             var subjectlistConverted = JsonConvert.DeserializeObject<List<ThongTinKhachHang>>(subjectlist);
             lstdiachi.ItemsSource = subjectlistConverted;
         }
+        async public void HienThiGioHang()
+        {
+            HttpClient httpClient = new HttpClient();
+            var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "SelectGioHang?MAKH=" + currentNguoiDung.MAKH.ToString());
+            var subjectlistConverted = JsonConvert.DeserializeObject<List<classGioHang>>(subjectlist);
+            lstttdonhang.ItemsSource = subjectlistConverted;
+        }
         private void lstdiachi_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            Navigation.PushAsync(new Page_Set_DiaChi());
         }
 
         async private void dathang_Clicked(object sender, EventArgs e)
@@ -38,6 +47,22 @@ namespace FinalAPP_Hasaki.Views
             await httpClient.GetStringAsync(IPaddress.url + "DatHang?MAKH=" + currentNguoiDung.MAKH.ToString());
             await DisplayAlert("Thông báo", "Bạn đã đặt hàng thành công", "OK");
             Navigation.PopAsync();
+        }
+        void KhoiTaoPicker()
+        {
+            string[] PTTT = new string[]
+            {"Thanh toán tiền khi nhận hàng (COD)", "Thanh toán trực tuyến VNPAY"};
+            picpttt.ItemsSource = PTTT;
+        }
+
+        async private void picpttt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var pic = (Picker)sender;
+            int dongchon = pic.SelectedIndex;
+            if(dongchon > 0)
+            {
+                await DisplayAlert("Thông báo", "Bạn đã chọn phương thức giao hàng " + (string)pic.SelectedItem, "OK");
+            }
         }
     }
 }

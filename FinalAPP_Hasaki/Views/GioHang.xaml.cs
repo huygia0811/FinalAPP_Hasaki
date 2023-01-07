@@ -44,6 +44,7 @@ namespace FinalAPP_Hasaki.Views
             int value = Convert.ToInt32(e.Value);
             HttpClient httpClient = new HttpClient();
             await httpClient.GetStringAsync(IPaddress.url + "UpdateSLGioHang?MAKH="+currentNguoiDung.MAKH.ToString()+"&MASP="+masp.ToString()+"&sl_updated="+value.ToString());
+            XuatTotal();
         }
 
         async private void ImageButton_Clicked(object sender, EventArgs e)
@@ -56,6 +57,8 @@ namespace FinalAPP_Hasaki.Views
                 int masp = hc.MASP;
                 HttpClient httpClient = new HttpClient();
                 await httpClient.GetStringAsync(IPaddress.url + "DropSPGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString());
+                HienThiGioHang();
+                XuatTotal();
             }   
         }
 
