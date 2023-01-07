@@ -14,8 +14,8 @@ namespace FinalAPP_Hasaki.Views
     public partial class DonHang : ContentPage
     {
         public DonHang()
-        {         
-            InitializeComponent();             
+        {
+            InitializeComponent();
         }
         public DonHang(int a)
         {
@@ -51,12 +51,21 @@ namespace FinalAPP_Hasaki.Views
         }
         async void hienthidonhang(int trangthai)
         {
+            if(currentNguoiDung.MAKH==0)
+            {
+                Application.Current.MainPage = new MainPage();
+                await Shell.Current.GoToAsync(state: "//DangNhap");
+
+            }
+            else
+            {
+                HttpClient httpClient = new HttpClient();
+                //192.168.1.13
+                var product_info_trangthai = await httpClient.GetStringAsync(IPaddress.url + "Show_Trangthai_Info?trangthai=" + trangthai.ToString() + "&makh=" + currentNguoiDung.MAKH.ToString());
+                var product_info_trangthai_Converted = JsonConvert.DeserializeObject<List<Info_trangthai>>(product_info_trangthai);
+                info_trangthai.ItemsSource = product_info_trangthai_Converted;
+            }    
             
-            HttpClient httpClient = new HttpClient();
-            //192.168.1.13
-            var product_info_trangthai = await httpClient.GetStringAsync(IPaddress.url + "Show_Trangthai_Info?trangthai=" + trangthai.ToString()+"&makh="+ currentNguoiDung.MAKH.ToString());
-            var product_info_trangthai_Converted = JsonConvert.DeserializeObject<List<Info_trangthai>>(product_info_trangthai);
-            info_trangthai.ItemsSource = product_info_trangthai_Converted;
         }
 
         private void button_mualai(object sender, EventArgs e)

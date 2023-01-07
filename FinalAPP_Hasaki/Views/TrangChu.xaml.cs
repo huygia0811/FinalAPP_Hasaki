@@ -28,7 +28,7 @@ namespace FinalAPP_Hasaki.Views
             }
             else
             {
-                Navigation.PushAsync(new DonHang());
+                Navigation.PushAsync(new DonHang(1));
             }
         }
         private void TIgiohang_Clicked(object sender, EventArgs e)

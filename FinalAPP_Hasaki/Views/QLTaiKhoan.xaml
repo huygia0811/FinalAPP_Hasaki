@@ -114,9 +114,16 @@
                                 <Label Text="Xem tất cã" HorizontalOptions="EndAndExpand"/>
                             </StackLayout>
                         </Grid>
-                        <StackLayout Grid.Row="3" Padding="10,0,10,0" BackgroundColor="White">
-                            <Label Text="Đăng xuất"/>
-                        </StackLayout>
+
+                        <Frame BorderColor="black"  Grid.Row="3" >
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="tapped_dangxuat" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+                                <Label Text="Đăng xuất" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                                <Image Source="turn_off.png" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </Frame>
                     </Grid>
                 </ViewCell>
             </DataTemplate>

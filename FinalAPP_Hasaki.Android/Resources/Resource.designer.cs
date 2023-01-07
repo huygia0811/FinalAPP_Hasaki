@@ -14,7 +14,7 @@ namespace FinalAPP_Hasaki.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -16922,10 +16922,13 @@ namespace FinalAPP_Hasaki.Droid
 			public const int trangchuicon = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int UpButton = 2131165402;
+			public const int turn_off = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int user = 2131165403;
+			public const int UpButton = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int user = 2131165404;
 			
 			static Drawable()
 			{

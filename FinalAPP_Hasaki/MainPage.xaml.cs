@@ -15,14 +15,6 @@ namespace FinalAPP_Hasaki
             InitializeComponent();
         }
 
-        //private void Link_dang_nhap(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new DangNhap());
-        //}
-
-        //private void Link_dang_ky(object sender, EventArgs e)
-        //{
-        //    Navigation.PushAsync(new DangKy());
-        //}
+  
     }
 }

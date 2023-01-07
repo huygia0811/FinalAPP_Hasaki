@@ -70,7 +70,7 @@ namespace FinalAPP_Hasaki.Views
             }      
         }
 
-        private async void click_check_code(object sender, EventArgs e)
+        private  async void click_check_code(object sender, EventArgs e)
         {
             if(randomCode== Code_entry.Text.ToString())
             {

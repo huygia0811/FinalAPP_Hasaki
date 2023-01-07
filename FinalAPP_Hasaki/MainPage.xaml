@@ -11,6 +11,12 @@
     <ShellItem Route="waiting" IsVisible="True" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate views:Waiting_page}"/>
     </ShellItem>
+    <ShellItem Route="DangKy" IsVisible="True" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate views:DangKy}"/>
+    </ShellItem>
+    <ShellItem Route="DangNhap" IsVisible="True" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate views:DangNhap}"/>
+    </ShellItem>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
         <Tab Route="TrangChu" Icon="trangchuicon.png" Title="Trang chủ">
             <ShellContent ContentTemplate="{DataTemplate views:TrangChu}"/>

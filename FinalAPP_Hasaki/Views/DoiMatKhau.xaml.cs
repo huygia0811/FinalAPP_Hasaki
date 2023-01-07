@@ -55,8 +55,8 @@ namespace FinalAPP_Hasaki.Views
                     if (nd.MAKH > 0)
                     {
                         await DisplayAlert("Thông báo", "Đổi mật khẩu thành công "+ hashSalt.Hash, "OK");
-                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công " + nd.MAKH, "OK");
-                        //Navigation.PushAsync(new DangNhap());
+                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công " + nd.MAKH, "OK");                      
+                        await Shell.Current.GoToAsync(state: "//login");
                     }
                     else
                         await DisplayAlert("Thông báo", "Đã có lỗi xảy ra vui lòng thử lại sau", "OK");

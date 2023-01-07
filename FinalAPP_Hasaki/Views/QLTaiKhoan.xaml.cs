@@ -15,24 +15,31 @@ namespace FinalAPP_Hasaki.Views
     public partial class QLTaiKhoan : ContentPage
     {
         public QLTaiKhoan()
-        {
-     
-              InitializeComponent();
-              qlnguoidung(currentNguoiDung.MAKH);
-
+        {         
+                InitializeComponent();
+                qlnguoidung(currentNguoiDung.MAKH);
         }
         async void qlnguoidung(int makh)
         {
+            if(makh==0)
+            {
+                Application.Current.MainPage = new MainPage();
+                await Shell.Current.GoToAsync(state: "//DangNhap");
 
-            HttpClient httpClient = new HttpClient();
-            //192.168.1.13
-            var khachhang = await httpClient.GetStringAsync(IPaddress.url + "GetInfoKhachHang?makh="+currentNguoiDung.MAKH.ToString());
-            var khachhang_Converted = JsonConvert.DeserializeObject<List<ThongTinKhachHang>>(khachhang);
-            QLtaikhoan_listview.ItemsSource = khachhang_Converted;
+            }
+            else
+            {
+                HttpClient httpClient = new HttpClient();
+                //192.168.1.13
+                var khachhang = await httpClient.GetStringAsync(IPaddress.url + "GetInfoKhachHang?makh=" + currentNguoiDung.MAKH.ToString());
+                var khachhang_Converted = JsonConvert.DeserializeObject<List<ThongTinKhachHang>>(khachhang);
+                QLtaikhoan_listview.ItemsSource = khachhang_Converted;
+            }    
+           
         }
         private void click_to_donhang(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang());
+            Navigation.PushAsync(new DonHang(1));
         }
 
         private void tapped_dangcho(object sender, EventArgs e)
@@ -69,6 +76,13 @@ namespace FinalAPP_Hasaki.Views
         private void tapped_capnhapdiachi(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Page_Set_DiaChi());
+        }
+
+        private async void tapped_dangxuat(object sender, EventArgs e)
+        {
+            currentNguoiDung.MAKH = 0;
+            await Shell.Current.GoToAsync(state: "//DangNhap");
+
         }
     }
 }

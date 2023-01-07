@@ -38,8 +38,9 @@ namespace FinalAPP_Hasaki.Views
                     currentNguoiDung.MATKHAUHASH = nd.MATKHAUHASH;
                     currentNguoiDung.MATKHAUSALT = nd.MATKHAUSALT;
                     await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
-                    Navigation.PopAsync();
-                }           
+                    Application.Current.MainPage = new MainPage();
+                    await Shell.Current.GoToAsync(state: "//TrangChu");
+                }
             }               
             else
             {

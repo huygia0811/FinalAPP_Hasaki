@@ -9,9 +9,15 @@ namespace FinalAPP_Hasaki
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
-            /*NguoiDung.nguoidung = new NguoiDung();*/
+            if(currentNguoiDung.MAKH<0)
+            {
+                MainPage = new MainPage();
+            }    
+            else
+            {
+                MainPage = new MainPage();
+            }    
+            
         }
 
         protected override void OnStart()
