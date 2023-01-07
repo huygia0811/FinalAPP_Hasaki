@@ -12,24 +12,25 @@ namespace FinalAPP_Hasaki
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HeaderContentView : ContentView
     {
-        string sdt { get; set; } = "";
+        string sdt { get; set; } ="0328921230";
         public HeaderContentView()
         {
             InitializeComponent();
             BindingContext = this;
-            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
-            {               
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    HiddenLabel();             
-                });
-                return true;
-            });
+            //Device.StartTimer(new TimeSpan(0, 0, 1), () =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        HiddenLabel();
+            //    });
+            //    return true;
+            //});
+            HiddenLabel();
         }
         
         public void HiddenLabel()
         {
-            if(currentNguoiDung.MAKH > 0)
+            if(currentNguoiDung.MAKH != 0)
             {
                 lbdangnhap.IsVisible = false;
                 lbdangky.IsVisible = false;

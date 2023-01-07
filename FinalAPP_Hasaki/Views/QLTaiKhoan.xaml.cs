@@ -44,22 +44,22 @@ namespace FinalAPP_Hasaki.Views
 
         private void tapped_dangcho(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang(1));
+            Navigation.PushAsync(new DonHang(2));
         }
 
         private void tapped_thanhcong(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang(2));
+            Navigation.PushAsync(new DonHang(1));
         }
 
         private void tapped_dahuy(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang(3));
+            Navigation.PushAsync(new DonHang(-1));
         }
 
         private void tapped_dangxuly(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang(4));
+            Navigation.PushAsync(new DonHang(0));
         }
 
         private void tapped_tatca(object sender, EventArgs e)
@@ -81,6 +81,7 @@ namespace FinalAPP_Hasaki.Views
         private async void tapped_dangxuat(object sender, EventArgs e)
         {
             currentNguoiDung.MAKH = 0;
+            Application.Current.MainPage = new MainPage();
             await Shell.Current.GoToAsync(state: "//DangNhap");
 
         }

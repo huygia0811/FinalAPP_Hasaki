@@ -29,7 +29,7 @@ namespace FinalAPP_Hasaki.Views
             HttpClient http = new HttpClient();
             var kq = await http.GetStringAsync(IPaddress.url + "DangNhap?SODIENTHOAI=" + Entry_Sodienthoai.Text);
             var nd = JsonConvert.DeserializeObject<NguoiDung>(kq);
-            if(nd.MAKH!=0)
+            if(nd.MAKH>0)
             {
                 bool isPasswordMatched = VerifyPassword(Entry_Matkhau.Text, nd.MATKHAUHASH, nd.MATKHAUSALT);                
                 if (isPasswordMatched == true)
@@ -41,6 +41,10 @@ namespace FinalAPP_Hasaki.Views
                     await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
                     Application.Current.MainPage = new MainPage();
                     await Shell.Current.GoToAsync(state: "//TrangChu");
+                }
+                else
+                {
+                    await DisplayAlert("Thông báo", "Tên đăng nhập hoặt mật khẩu không chính xác", "OK");
                 }
             }               
             else

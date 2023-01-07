@@ -31,23 +31,23 @@ namespace FinalAPP_Hasaki.Views
 
         private void tapped_cho_thanh_toan(object sender, EventArgs e)
         {
-            hienthidonhang(1);
+            hienthidonhang(2);
         }
 
         private void tapped_dang_xu_ly(object sender, EventArgs e)
         {
-            hienthidonhang(2);
+            hienthidonhang(0);
 
         }
 
         private void tapped_thanh_cong(object sender, EventArgs e)
         {
-            hienthidonhang(3);
+            hienthidonhang(1);
         }
 
         private void tapped_da_huy(object sender, EventArgs e)
         {
-            hienthidonhang(4);
+            hienthidonhang(-1);
         }
         async void hienthidonhang(int trangthai)
         {
@@ -67,7 +67,6 @@ namespace FinalAPP_Hasaki.Views
             }    
             
         }
-
         private void button_mualai(object sender, EventArgs e)
         {
          

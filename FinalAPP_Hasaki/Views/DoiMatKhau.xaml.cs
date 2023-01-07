@@ -54,9 +54,10 @@ namespace FinalAPP_Hasaki.Views
                     nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
                     if (nd.MAKH > 0)
                     {
-                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công "+ hashSalt.Hash, "OK");
-                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công " + nd.MAKH, "OK");                      
-                        await Shell.Current.GoToAsync(state: "//login");
+                        await DisplayAlert("Thông báo", "Đổi mật khẩu thành công ", "OK");
+                        currentNguoiDung.MAKH = 0;
+                        Application.Current.MainPage = new MainPage();
+                        await Shell.Current.GoToAsync(state: "//DangNhap");
                     }
                     else
                         await DisplayAlert("Thông báo", "Đã có lỗi xảy ra vui lòng thử lại sau", "OK");

@@ -53,8 +53,7 @@ namespace FinalAPP_Hasaki.Views
                 nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
                 if (nd.MAKH > 0)
                 {
-                  
-                    Navigation.PushAsync(new DangNhap());
+                    await Shell.Current.GoToAsync(state: "//DangNhap");
                 }
                 else
                     await DisplayAlert("Thông báo", "Đã có lỗi xảy ra vui lòng thử lại sau", "OK");
