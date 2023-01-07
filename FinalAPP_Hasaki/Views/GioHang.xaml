@@ -9,7 +9,9 @@
               RowHeight="200"
               HasUnevenRows="True"
               SeparatorColor="LightGray"
-              SeparatorVisibility="Default">
+              SeparatorVisibility="Default"
+              IsPullToRefreshEnabled="True"
+              RefreshControlColor="Red">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -65,7 +67,9 @@
                                                      SpinButtonAlignment="Both"
                                                      ValueChanged="sfNumericUpDown_ValueChanged"
                                                      FormatString="n"/>
-                                <Label Text="x"/>
+                                <Label Text="x"
+                                       FontSize="20"
+                                       HorizontalOptions="EndAndExpand"/>
                                 <Label Text="{Binding GIA, StringFormat='{0:0,0 đ}'}"
                                    FontSize="Medium"
                                    TextColor="Black"
@@ -78,18 +82,45 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackLayout Orientation="Vertical"
-                     BackgroundColor="LightGray">
-            <Label Text="Tổng thanh toán"
-                   TextColor="Black"
-                   FontSize="Medium"
-                   Margin="10"/>
-            <!--<Label Text="{Binding TOTAL , StringFormat='{0:0,0 đ}'}}"
-                   TextColor="Orange"/>-->
-        </StackLayout>
-
-        <Button x:Name="dathang" Text="Đặt hàng"
+        <ListView x:Name="lstTongTien_GH"      
+                  HasUnevenRows="True"
+                  HeightRequest="50"
+                  BackgroundColor="LightGray"
+                  IsPullToRefreshEnabled="True"
+                  RefreshControlColor="Red">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Tổng thanh toán"
+                                   TextColor="Black"
+                                   FontSize="Medium"
+                                   Margin="10"
+                                   Grid.Column="0"
+                                   Grid.Row="0"/>
+                            <Label Text="{Binding TOTAL, StringFormat='{0:0,0 đ}'}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="Center"
+                                   TextColor="DarkOrange"
+                                   Margin="10"
+                                   Grid.Column="1"
+                                   Grid.Row="0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button x:Name="dathang" Text="Tiến hành đặt hàng"
+                BackgroundColor="DarkOrange"
+                TextColor="White"
                 Clicked="dathang_Clicked"
-                FontSize="Large"/>
+                FontSize="Large"
+                HeightRequest="50"/>
     </StackLayout>
 </ContentPage>

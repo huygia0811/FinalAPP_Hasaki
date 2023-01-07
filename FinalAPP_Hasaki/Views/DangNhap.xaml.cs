@@ -37,6 +37,7 @@ namespace FinalAPP_Hasaki.Views
                     currentNguoiDung.MAKH = nd.MAKH;
                     currentNguoiDung.MATKHAUHASH = nd.MATKHAUHASH;
                     currentNguoiDung.MATKHAUSALT = nd.MATKHAUSALT;
+                    currentNguoiDung.SDT = nd.SODIENTHOAI;
                     await DisplayAlert("Thông báo", "Đăng nhập thành công", "OK");
                     Application.Current.MainPage = new MainPage();
                     await Shell.Current.GoToAsync(state: "//TrangChu");
