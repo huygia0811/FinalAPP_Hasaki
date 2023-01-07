@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FinalAPP_Hasaki"
              xmlns:views="clr-namespace:FinalAPP_Hasaki.Views"
-             x:Class="FinalAPP_Hasaki.MainPage">
+             x:Class="FinalAPP_Hasaki.MainPage"
+             BackgroundColor="#326e51">
 
     <Shell.FlyoutHeader>
         <local:HeaderContentView></local:HeaderContentView>

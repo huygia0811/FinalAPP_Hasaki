@@ -89,7 +89,7 @@ namespace FinalAPP_Hasaki.Views
         {
             MenuItem menuitem = (MenuItem)sender;
             Info_trangthai info= (Info_trangthai)menuitem.CommandParameter;
-            if(info.TRANGTHAI==0)
+            if(info.TRANGTHAI==2)
             {
                 HttpClient httpClient = new HttpClient();
                 //192.168.1.13

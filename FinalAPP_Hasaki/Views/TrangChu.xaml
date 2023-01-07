@@ -4,7 +4,7 @@
              x:Class="FinalAPP_Hasaki.Views.TrangChu">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="search.png"  x:Name="TimKiem" Clicked="TimKiem_Clicked"></ToolbarItem>
-        <ToolbarItem Text="Kiểm tra đơn hàng" x:Name="TIKTDH" Clicked="TIKTDH_Clicked"></ToolbarItem>
+        <ToolbarItem IconImageSource="purchase_order.png" x:Name="TIKTDH" Clicked="TIKTDH_Clicked"></ToolbarItem>
         <ToolbarItem IconImageSource="shoppingcarticon.png" x:Name="TIgiohang" Clicked="TIgiohang_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     

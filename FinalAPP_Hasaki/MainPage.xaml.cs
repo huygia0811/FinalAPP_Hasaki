@@ -12,7 +12,7 @@ namespace FinalAPP_Hasaki
     {
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
   

@@ -39,6 +39,7 @@
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
+                   IsVisible="False"
                    >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Link_tai_khoan"/>

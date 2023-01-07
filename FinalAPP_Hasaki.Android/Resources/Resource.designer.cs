@@ -14,7 +14,7 @@ namespace FinalAPP_Hasaki.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
 	public partial class Resource
 	{
 		
@@ -16889,49 +16889,52 @@ namespace FinalAPP_Hasaki.Droid
 			public const int preference_list_divider_material = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int qltkicon = 2131165391;
+			public const int purchase_order = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int questionmarkicon = 2131165392;
+			public const int qltkicon = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int search = 2131165393;
+			public const int questionmarkicon = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int shoppingcarticon = 2131165394;
+			public const int search = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int skincareicon = 2131165395;
+			public const int shoppingcarticon = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int slider = 2131165396;
+			public const int skincareicon = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int test_custom_background = 2131165397;
+			public const int slider = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int thongbaoicon = 2131165398;
+			public const int test_custom_background = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int thuonghieuicon = 2131165399;
+			public const int thongbaoicon = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int tooltip_frame_dark = 2131165400;
+			public const int thuonghieuicon = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int tooltip_frame_light = 2131165401;
+			public const int tooltip_frame_dark = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int trangchuicon = 2131165402;
+			public const int tooltip_frame_light = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int turn_off = 2131165403;
+			public const int trangchuicon = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int UpButton = 2131165404;
+			public const int turn_off = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int user = 2131165405;
+			public const int UpButton = 2131165405;
+			
+			// aapt resource value: 0x7F0700DE
+			public const int user = 2131165406;
 			
 			static Drawable()
 			{
