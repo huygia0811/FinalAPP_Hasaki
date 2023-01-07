@@ -26,7 +26,7 @@ namespace FinalAPP_Hasaki.Views
 
         private void tapped_tatca(object sender, EventArgs e)
         {
-            hienthidonhang(1);
+            hienthitatca();
         }
 
         private void tapped_cho_thanh_toan(object sender, EventArgs e)
@@ -67,9 +67,46 @@ namespace FinalAPP_Hasaki.Views
             }    
             
         }
-        private void button_mualai(object sender, EventArgs e)
+        async void hienthitatca()
         {
-         
+            if (currentNguoiDung.MAKH == 0)
+            {
+                Application.Current.MainPage = new MainPage();
+                await Shell.Current.GoToAsync(state: "//DangNhap");
+
+            }
+            else
+            {
+                HttpClient httpClient = new HttpClient();
+                //192.168.1.13
+                var product_info_trangthai = await httpClient.GetStringAsync(IPaddress.url + "Show_Trangthai_TatCa?makh=" + currentNguoiDung.MAKH.ToString());
+                var product_info_trangthai_Converted = JsonConvert.DeserializeObject<List<Info_trangthai>>(product_info_trangthai);
+                info_trangthai.ItemsSource = product_info_trangthai_Converted;
+            }
+        }
+
+        private async void OnDelete(object sender, EventArgs e)
+        {
+            MenuItem menuitem = (MenuItem)sender;
+            Info_trangthai info= (Info_trangthai)menuitem.CommandParameter;
+            if(info.TRANGTHAI==0)
+            {
+                HttpClient httpClient = new HttpClient();
+                //192.168.1.13
+                var product_info_trangthai = await httpClient.GetStringAsync(IPaddress.url + "HuyHoaDon?sohd=" + info.SOHD + "&makh=" + currentNguoiDung.MAKH.ToString());
+                await DisplayAlert("Thông báo", "Bạn đã xóa hóa đơn hóa đơn: " + info.SOHD, "OK");
+            }
+            else
+            {
+                await DisplayAlert("Thông báo", "Không thể hủy hóa đơn do đang giao", "OK");
+            }
+            
+      
+        }
+
+        private void OnMore(object sender, EventArgs e)
+        {
+
         }
     }
 }

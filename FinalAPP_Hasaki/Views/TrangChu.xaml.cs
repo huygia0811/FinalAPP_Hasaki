@@ -132,5 +132,10 @@ namespace FinalAPP_Hasaki.Views
             }
             Thuonghieu_noibat.SelectedItem = null;
         }
+
+        private void TimKiem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Search());
+        }
     }
 }
