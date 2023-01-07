@@ -10,17 +10,11 @@
                           x:Name="lstdiachi"
                           HasUnevenRows="True"
                           ItemSelected="lstdiachi_ItemSelected"
-                          HeightRequest="120">
+                          HeightRequest="50">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <Grid Margin="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                    </Grid.RowDefinitions>
                                     <Label Text="Địa chỉ đơn hàng"
                                        TextColor="Black"
                                        FontSize="15"
@@ -60,7 +54,8 @@
                       x:Name="lstttdonhang"
                       HasUnevenRows="True"
                       SeparatorColor="Black"
-                      SeparatorVisibility="Default">
+                      SeparatorVisibility="Default"
+                      HeightRequest="450">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
