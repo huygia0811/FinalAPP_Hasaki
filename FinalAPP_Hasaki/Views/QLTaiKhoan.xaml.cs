@@ -39,7 +39,7 @@ namespace FinalAPP_Hasaki.Views
         }
         private void click_to_donhang(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DonHang(1));
+            Navigation.PushAsync(new DonHang(10));
         }
 
         private void tapped_dangcho(object sender, EventArgs e)

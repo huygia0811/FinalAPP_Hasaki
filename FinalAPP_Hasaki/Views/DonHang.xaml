@@ -60,7 +60,7 @@
                                           CommandParameter="{Binding .}"
                                           Text="Delete" IsDestructive="True" />         
                             </ViewCell.ContextActions>
-                            <Grid BackgroundColor="White" Margin="0,5,0,5">
+                            <Grid BackgroundColor="White" Margin="0,5,0,5" Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"></RowDefinition>
                                     <RowDefinition Height="auto"></RowDefinition>
@@ -68,17 +68,32 @@
                                     <RowDefinition Height="auto"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
                                     <Label Text="#" FontSize="20"/>
                                     <Label Text="{Binding SOHD}" FontSize="20"/>
-                                    <Label Text="|"  FontSize="20"/>
-                                    <Label Text="{Binding NGHD}"  FontSize="20"/>
+                                    <!--<Label Text="|"  FontSize="20"/>
+                                    <Label Text="{Binding NGHD}"  FontSize="20"/>-->
                                 </StackLayout>
                                 <Image  Source="{Binding URL_IMAGE}" Grid.Row="1" Grid.Column="0" HeightRequest="150"/>
-                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding GIA , StringFormat='{0:0,0 đ}'}" FontSize="20" TextColor="red"/>
+                               
+                                <Grid Grid.Row="1" Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding TENSP}" Grid.Row="0" />
+                                    <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                        <Label Text="{Binding DUNGTICH}"/>
+                                        <Label Text="x" HorizontalOptions="EndAndExpand"/>
+                                        <Label Text="{Binding SL}"/>
+                                    </StackLayout>
+                                    <Label Grid.Row="5" Grid.Column="0" Text="{Binding GIA , StringFormat='{0:0,0 đ}'}" FontSize="20" TextColor="red"/>
+                                </Grid>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

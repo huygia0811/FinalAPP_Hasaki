@@ -17,10 +17,17 @@
 
                         </Grid.RowDefinitions>
                         <StackLayout BackgroundColor="red" HeightRequest="200" Grid.Row="0">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="tapped_thongtin"/>
+                            </StackLayout.GestureRecognizers>
                             <Frame HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="100">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="taped_allthongtin"/>
+                                </Frame.GestureRecognizers>
                                 <Image Source="user.png" Aspect="AspectFill"/>
                             </Frame>
                             <Label Text="{Binding SODIENTHOAI}" HorizontalOptions="CenterAndExpand" FontSize="20" />
+                            <Label Text="Click xem thông tin cá nhân !!!" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                         <Frame BorderColor="black" Grid.Row="1" >
                             <Frame.GestureRecognizers>

@@ -20,6 +20,7 @@ namespace FinalAPP_Hasaki.Views
         public QuenMatKhau()
         {
             InitializeComponent();
+            this.Title = "Quên mật khẩu";
         }
         public QuenMatKhau(int makh)
         {

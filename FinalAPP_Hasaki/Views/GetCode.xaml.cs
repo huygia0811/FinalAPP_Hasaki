@@ -22,6 +22,7 @@ namespace FinalAPP_Hasaki.Views
         public GetCode()
         {
             InitializeComponent();
+            this.Title = "Quên mật khẩu";
         }
 
         private async void click_getcode(object sender, EventArgs e)

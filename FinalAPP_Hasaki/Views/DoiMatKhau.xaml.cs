@@ -17,6 +17,7 @@ namespace FinalAPP_Hasaki.Views
         public DoiMatKhau()
         {
             InitializeComponent();
+            this.Title = "Đổi mật khẩu";
         }
         public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
         {

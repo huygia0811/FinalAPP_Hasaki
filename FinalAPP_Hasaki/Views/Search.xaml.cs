@@ -16,6 +16,7 @@ namespace FinalAPP_Hasaki.Views
         public Search()
         {
             InitializeComponent();
+            this.Title = "Tìm kiếm";
         }
 
         private async void clicked_timkiem(object sender, EventArgs e)

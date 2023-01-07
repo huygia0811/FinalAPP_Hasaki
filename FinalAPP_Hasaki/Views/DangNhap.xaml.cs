@@ -17,6 +17,7 @@ namespace FinalAPP_Hasaki.Views
         public DangNhap()
         {
             InitializeComponent();
+            this.Title = "Đăng Nhập";
         }
         public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
         {

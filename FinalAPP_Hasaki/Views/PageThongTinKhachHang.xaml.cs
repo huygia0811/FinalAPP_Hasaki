@@ -17,6 +17,7 @@ namespace FinalAPP_Hasaki.Views
         {
             InitializeComponent();
             qlnguoidung(currentNguoiDung.MAKH);
+            this.Title = "Cập nhập thông tin tài khoản";
         }
         async void qlnguoidung(int makh)
         {
@@ -67,6 +68,16 @@ namespace FinalAPP_Hasaki.Views
         private void tapped_doimatkhau(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DoiMatKhau());
+        }
+
+        private void taped_allthongtin(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShowThongTin());
+        }
+
+        private void tapped_thongtin(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShowThongTin());
         }
     }
 }

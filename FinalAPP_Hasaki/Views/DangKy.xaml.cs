@@ -17,6 +17,7 @@ namespace FinalAPP_Hasaki.Views
         public DangKy()
         {
             InitializeComponent();
+			this.Title = "Đăng Ký";
 		}
 		public static HashSalt GenerateSaltedHash(int size, string password)
 		{

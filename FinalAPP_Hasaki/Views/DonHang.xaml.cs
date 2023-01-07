@@ -20,7 +20,15 @@ namespace FinalAPP_Hasaki.Views
         public DonHang(int a)
         {
             InitializeComponent();
-            hienthidonhang(a);
+            if(a==10)
+            {
+                hienthitatca();
+            }   
+            else
+            {
+                hienthidonhang(a);
+            }    
+     
 
         }
 

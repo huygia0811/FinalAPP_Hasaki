@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalAPP_Hasaki.Views.Search">
 
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" ></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -12,14 +12,15 @@
         <Entry x:Name="entry_search" Grid.Row="0"></Entry>
         <Button x:Name="Button_search" Text="Tìm kiếm" Grid.Row="1" Clicked="clicked_timkiem"/>
         <CollectionView x:Name="search"
-                            HeightRequest="500"
+                            HeightRequest="400"
                             SelectionMode="Single"
                             SelectionChanged="search_SelectionChanged"
-                            Grid.Row="3">
+                            Grid.Row="3" Margin="5"
+                            BackgroundColor="#cfced3">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
                                      Span="2"
-                                     VerticalItemSpacing="0"
+                                     VerticalItemSpacing="10"
                                      HorizontalItemSpacing="10" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
