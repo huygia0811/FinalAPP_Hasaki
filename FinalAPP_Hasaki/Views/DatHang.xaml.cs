@@ -21,6 +21,14 @@ namespace FinalAPP_Hasaki.Views
             HienThiDiaChi();
             HienThiGioHang();
             KhoiTaoPicker();
+            XuatTotal();
+        }
+        async public void XuatTotal()
+        {
+            HttpClient httpClient = new HttpClient();
+            var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "TongTienGH?MAKH=" + currentNguoiDung.MAKH.ToString());
+            var subjectlistConverted = JsonConvert.DeserializeObject<List<TongTien_GH>>(subjectlist);
+            lstTongTien_GH.ItemsSource = subjectlistConverted;
         }
         async public void HienThiDiaChi()
         {

@@ -85,9 +85,7 @@
         <ListView x:Name="lstTongTien_GH"      
                   HasUnevenRows="True"
                   HeightRequest="50"
-                  BackgroundColor="LightGray"
-                  IsPullToRefreshEnabled="True"
-                  RefreshControlColor="Red">
+                  BackgroundColor="LightGray">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

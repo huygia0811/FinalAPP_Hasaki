@@ -250,7 +250,7 @@
                 <!--Các sản phẩm của mỹ phẩm-->
                 <StackLayout Grid.Row="2"
                              HeightRequest="20">
-                    <Button Text="Chăm sóc cơ thể"
+                    <Button Text="Mỹ phẩm"
                             TextColor="Green"
                             FontAttributes="Bold"
                             FontSize="25" />
@@ -302,7 +302,7 @@
 
                 <StackLayout Grid.Row="4"
                              HeightRequest="20">
-                    <Button Text="Chăm sóc cá nhân"
+                    <Button Text="Chăm sóc da mặt"
                             TextColor="Green"
                             FontAttributes="Bold"
                             FontSize="25" />

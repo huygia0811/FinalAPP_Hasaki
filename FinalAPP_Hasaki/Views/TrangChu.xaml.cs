@@ -55,10 +55,10 @@ namespace FinalAPP_Hasaki.Views
         async void hienthiproduct()
         {
             HttpClient httpClient = new HttpClient();
-            var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "GetSPByLoai?maloai=5");
+            var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "GetSPByLoai?maloai=1");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             Homeproduct1.ItemsSource = subjectlistConverted;
-            var subjectlist2 = await httpClient.GetStringAsync(IPaddress.url + "GetSPByLoai?maloai=6");
+            var subjectlist2 = await httpClient.GetStringAsync(IPaddress.url + "GetSPByLoai?maloai=2");
             var subjectlistConverted2 = JsonConvert.DeserializeObject<List<Product>>(subjectlist2);
             Homeproduct2.ItemsSource = subjectlistConverted2;
         }

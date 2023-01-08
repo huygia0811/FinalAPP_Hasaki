@@ -53,8 +53,8 @@ namespace FinalAPP_Hasaki.Views
             if (answer)
             {
                 ImageButton bt = (ImageButton)sender;
-                classGioHang hc = (classGioHang)bt.BindingContext;
-                int masp = hc.MASP;
+                classGioHang hc2 = (classGioHang)bt.BindingContext;
+                int masp = hc2.MASP;
                 HttpClient httpClient = new HttpClient();
                 await httpClient.GetStringAsync(IPaddress.url + "DropSPGioHang?MAKH=" + currentNguoiDung.MAKH.ToString() + "&MASP=" + masp.ToString());
                 HienThiGioHang();
