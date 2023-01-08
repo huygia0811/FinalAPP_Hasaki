@@ -36,7 +36,6 @@ namespace FinalAPP_Hasaki.Views
         async void hienthihang()
         {
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "GetHang");
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Hang>>(subjectlist);
             Thuonghieu_noibat.ItemsSource = subjectlistConverted;

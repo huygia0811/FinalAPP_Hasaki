@@ -14,7 +14,5 @@ namespace FinalAPP_Hasaki
         {
             InitializeComponent();           
         }
-
-  
     }
 }

@@ -111,10 +111,5 @@ namespace FinalAPP_Hasaki.Views
             
       
         }
-
-        private void OnMore(object sender, EventArgs e)
-        {
-
-        }
     }
 }

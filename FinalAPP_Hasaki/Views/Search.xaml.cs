@@ -22,7 +22,6 @@ namespace FinalAPP_Hasaki.Views
         private async void clicked_timkiem(object sender, EventArgs e)
         {
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var subjectlist = await httpClient.GetStringAsync(IPaddress.url + "Search?keyword=" + entry_search.Text);
             var subjectlistConverted = JsonConvert.DeserializeObject<List<Product>>(subjectlist);
             search.ItemsSource = subjectlistConverted;

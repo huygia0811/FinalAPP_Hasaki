@@ -23,7 +23,6 @@ namespace FinalAPP_Hasaki.Views
         {
 
             HttpClient httpClient = new HttpClient();
-            //192.168.1.13
             var khachhang = await httpClient.GetStringAsync(IPaddress.url + "GetInfoKhachHang?makh=" + currentNguoiDung.MAKH.ToString());
             var khachhang_Converted = JsonConvert.DeserializeObject<List<ThongTinKhachHang>>(khachhang);
             listview_thongtinkhachhang.ItemsSource = khachhang_Converted;
@@ -34,8 +33,6 @@ namespace FinalAPP_Hasaki.Views
             HttpClient http = new HttpClient();
             ThongTinKhachHang nd = new ThongTinKhachHang()
             {
-                
-
             };
             string jsonlh = JsonConvert.SerializeObject(nd);
             StringContent httcontent = new StringContent(jsonlh, Encoding.UTF8, "application/json");

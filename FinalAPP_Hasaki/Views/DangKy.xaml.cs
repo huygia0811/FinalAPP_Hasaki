@@ -56,8 +56,8 @@ namespace FinalAPP_Hasaki.Views
 			if (nd.MAKH > 0)
             {
 				await DisplayAlert("Thông báo", "Tạo tài khoản thành công. ", "OK");
-				Navigation.PushAsync(new DangNhap());
-			}				
+                await Shell.Current.GoToAsync(state: "//DangNhap");
+            }				
 			else
 				await DisplayAlert("Thông báo", "Số điện thoại " +nd.SODIENTHOAI +" Đã tồn tại.", "OK");
 

@@ -30,7 +30,6 @@ namespace FinalAPP_Hasaki.Views
             else
             {
                 HttpClient httpClient = new HttpClient();
-                //192.168.1.13
                 var khachhang = await httpClient.GetStringAsync(IPaddress.url + "GetInfoKhachHang?makh=" + currentNguoiDung.MAKH.ToString());
                 var khachhang_Converted = JsonConvert.DeserializeObject<List<ThongTinKhachHang>>(khachhang);
                 QLtaikhoan_listview.ItemsSource = khachhang_Converted;

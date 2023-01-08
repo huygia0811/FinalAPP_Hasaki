@@ -74,22 +74,6 @@ namespace FinalAPP_Hasaki.Views
             {
                 await DisplayAlert("Thông báo", "Mật khâu củ không đúng vui lòng thử lại sau" , "OK");
             }
-
-
-            //HashSalt hashSalt = GenerateSaltedHash(64, Matkhau_entry.Text);
-            //NguoiDung nd = new NguoiDung { MATKHAUHASH = hashSalt.Hash, MATKHAUSALT = hashSalt.Salt, SODIENTHOAI = SDT_entry.Text, EMAIL = Email_entry.Text };
-            //string jsonlh = JsonConvert.SerializeObject(nd);
-            //StringContent httcontent = new StringContent(jsonlh, Encoding.UTF8, "application/json");
-            //HttpResponseMessage kq = await http.PostAsync(IPaddress.url + "DangKy", httcontent);
-            //var kqtv = await kq.Content.ReadAsStringAsync();
-            //nd = JsonConvert.DeserializeObject<NguoiDung>(kqtv);
-            //if (nd.MAKH > 0)
-            //{
-            //    await DisplayAlert("Thông báo", "Tạo tài khoản thành công. " + hashSalt.Hash, "OK");
-            //    Navigation.PushAsync(new DangNhap());
-            //}
-            //else
-            //    await DisplayAlert("Thông báo", "Tên số điện thoại " + nd.SODIENTHOAI + " Đã tồn tại.", "OK");
         }
     }
 }

@@ -22,9 +22,6 @@
         <Tab Route="TrangChu" Icon="trangchuicon.png" Title="Trang chủ">
             <ShellContent ContentTemplate="{DataTemplate views:TrangChu}"/>
         </Tab>
-        <Tab Icon="thongbaoicon.png" Title="Thông báo">
-            <ShellContent ContentTemplate="{DataTemplate views:ThongBao}"/>
-        </Tab>
         <Tab Icon="hotdealsicon.png" Title="Hot Deals">
             <ShellContent ContentTemplate="{DataTemplate views:HotDeals}"/>
         </Tab>

@@ -23,15 +23,7 @@ namespace FinalAPP_Hasaki.Views
         {
             HttpClient http = new HttpClient();
             var kq = await http.GetStringAsync(IPaddress.url + "updateDiaChi?dchi=" + Set_diachi.Text + "&makh=" + currentNguoiDung.MAKH.ToString());
-           // var nd = JsonConvert.DeserializeObject<ClassCheckUpdate>(kq);
-            //if (nd.DCHI.Length>0)
-            //{
-                await DisplayAlert("Thông báo", "Cập nhập thành công", "OK");
-            //}
-            //else
-            //{
-                //await DisplayAlert("Thông báo", "Đã có lỗi xảy ra", "OK");
-            //}
+            await DisplayAlert("Thông báo", "Cập nhập thành công", "OK");
         }
     }
 }

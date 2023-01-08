@@ -18,8 +18,7 @@ namespace FinalAPP_Hasaki
             InitializeComponent();
             HiddenLabel();
             BindingContext = this;           
-        }
-        
+        }      
         public void HiddenLabel()
         {
             if(currentNguoiDung.MAKH != 0)
@@ -28,20 +27,17 @@ namespace FinalAPP_Hasaki
                 lbdangky.IsVisible = false;
                 lbsdt.IsVisible = true;
             }
-        }
-      
+        }      
         private void Link_dang_nhap(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DangNhap());
             Shell.Current.FlyoutIsPresented = false;
         }
-
         private void Link_dang_ky(object sender, EventArgs e)
         {
             Navigation.PushAsync(new DangKy());
             Shell.Current.FlyoutIsPresented = false;
         }
-
         private void Link_tai_khoan(object sender, EventArgs e)
         {
             Navigation.PushAsync(new  QLTaiKhoan());

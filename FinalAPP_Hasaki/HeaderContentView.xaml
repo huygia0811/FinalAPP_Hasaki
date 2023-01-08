@@ -9,6 +9,13 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <Frame HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="100" Grid.Row="0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer/>
+            </Frame.GestureRecognizers>
+            <Image Source="user.png" Aspect="AspectFill"/>
+        </Frame>
+
         <StackLayout Padding="10"
                      VerticalOptions="EndAndExpand" Orientation="Vertical" Grid.Row="1">
             <Label Text="Đăng nhập"
